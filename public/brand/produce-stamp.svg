@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" role="img" aria-label="DC Groceries produce stamp">
+  <title>DC Groceries Produce Stamp</title>
+  <circle cx="160" cy="160" r="148" fill="none" stroke="#18332C" stroke-width="4" />
+  <circle cx="160" cy="160" r="132" fill="none" stroke="#386641" stroke-width="2" stroke-dasharray="8 6" />
+  <circle cx="160" cy="160" r="118" fill="#F8F2E7" />
+  <g transform="translate(110 72) scale(0.72)">
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      fill="#18332C"
+      d="M8 10h26c16 0 22 8 22 22v26c0 14-6 22-22 22H8V10zm22 16c5-4 12 0 12 7s-6 11-12 9c-6-2-6-10 0-16z"
+    />
+    <path
+      fill="#386641"
+      d="M58 16c22-4 34 10 34 28s-12 36-34 34c-5-1-9-4-11-8l9-9c9 7 20 2 22-8 2-10-5-20-16-22-3-1-6 0-8 2l-6-7z"
+    />
+    <path fill="#F28C28" d="M72 58c8 4 6 14-2 16-6 2-12-2-12-8 0-4 6-10 14-8z" opacity="0.85" />
+  </g>
+  <path
+    id="stamp-text-ring"
+    fill="none"
+    d="M 48 160 A 112 112 0 1 1 272 160 A 112 112 0 1 1 48 160"
+  />
+  <text fill="#18332C" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="600" letter-spacing="1.2">
+    <textPath href="#stamp-text-ring" startOffset="50%" text-anchor="middle">
+      DC Groceries • Produce to Pantry
+    </textPath>
+  </text>
+</svg>
