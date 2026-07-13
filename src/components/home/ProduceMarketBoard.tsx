@@ -9,7 +9,6 @@ const boardSections = [
     title: "Fruit",
     href: "/collections/fresh-fruit",
     collectionSlug: "fresh-fruit",
-    layout: "lg:col-span-7 lg:row-span-2",
     featuredSlugs: [
       "gala-apples-3lb-bag",
       "navel-oranges-4lb-bag",
@@ -20,14 +19,16 @@ const boardSections = [
     title: "Vegetables",
     href: "/collections/fresh-vegetables",
     collectionSlug: "fresh-vegetables",
-    layout: "lg:col-span-5",
-    featuredSlugs: ["roma-tomatoes-2lb-pack", "tri-color-bell-peppers-3-count"],
+    featuredSlugs: [
+      "roma-tomatoes-2lb-pack",
+      "tri-color-bell-peppers-3-count",
+      "whole-carrots-2lb-bag",
+    ],
   },
   {
     title: "Herbs",
     href: "/collections/herbs-aromatics",
     collectionSlug: "herbs-aromatics",
-    layout: "lg:col-span-5",
     featuredSlugs: ["fresh-cilantro-1-bunch", "fresh-garlic-5-bulb-pack"],
   },
 ] as const;
@@ -49,7 +50,7 @@ export function ProduceMarketBoard() {
           </Link>
         </div>
 
-        <div className="grid gap-6 lg:grid-cols-12 lg:grid-rows-2">
+        <div className="space-y-10">
           {boardSections.map((section) => {
             const products = getProductsByCollection(section.collectionSlug);
             const featured = section.featuredSlugs
@@ -57,11 +58,8 @@ export function ProduceMarketBoard() {
               .filter(Boolean);
 
             return (
-              <div
-                key={section.collectionSlug}
-                className={`flex flex-col gap-4 ${section.layout}`}
-              >
-                <div className="flex items-center justify-between">
+              <div key={section.collectionSlug} className="space-y-4">
+                <div className="flex items-center justify-between gap-3">
                   <h3 className="font-heading text-xl font-semibold text-market-ink">
                     {section.title}
                   </h3>
@@ -73,13 +71,7 @@ export function ProduceMarketBoard() {
                   </Link>
                 </div>
 
-                <div
-                  className={
-                    section.title === "Fruit"
-                      ? "grid gap-4 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2"
-                      : "grid gap-4 sm:grid-cols-2"
-                  }
-                >
+                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
                   {featured.map((product) =>
                     product ? (
                       <ProduceMarketCard key={product.id} product={product} />

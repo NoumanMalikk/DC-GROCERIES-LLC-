@@ -28,16 +28,16 @@ export function ProductCard({
   return (
     <article
       className={cn(
-        "group flex h-full min-h-[420px] flex-col overflow-hidden rounded-2xl border border-border-sand bg-fresh-white p-3 shadow-card transition-[transform,box-shadow] duration-300 motion-reduce:transition-none sm:p-4",
+        "group flex h-full flex-col overflow-hidden rounded-2xl border border-border-sand bg-fresh-white shadow-card transition-[transform,box-shadow] duration-300 motion-reduce:transition-none",
         !reducedMotion &&
           "hover:-translate-y-1 hover:shadow-card-hover motion-reduce:hover:translate-y-0",
         className,
       )}
     >
-      <div className="relative mb-3">
+      <div className="relative">
         <Link
           href={`/products/${product.slug}`}
-          className="block overflow-hidden rounded-xl bg-white ring-1 ring-border-sand/70"
+          className="block overflow-hidden bg-white"
           tabIndex={-1}
           aria-hidden="true"
         >
@@ -47,22 +47,17 @@ export function ProductCard({
               alt={alt}
               fill
               sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-              className="object-contain p-4 transition-transform duration-300 motion-reduce:transition-none group-hover:scale-[1.03] motion-reduce:group-hover:scale-100"
+              className="object-contain p-5 transition-transform duration-300 motion-reduce:transition-none group-hover:scale-[1.03] motion-reduce:group-hover:scale-100"
               priority={priority}
             />
           </div>
         </Link>
-        <div className="absolute right-2 top-2">
+        <div className="absolute right-2 top-2 z-10">
           <WishlistButton productId={product.id} size="sm" />
-        </div>
-        <div className="absolute left-2 top-2">
-          <span className="rounded-full bg-white/95 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-soft-graphite shadow-sm">
-            {product.subcategory}
-          </span>
         </div>
       </div>
 
-      <div className="flex flex-1 flex-col gap-2 px-0.5">
+      <div className="flex min-h-[200px] flex-1 flex-col gap-2 border-t border-border-sand/70 p-4">
         <p className="text-[11px] font-medium uppercase tracking-wide text-garden-green">
           {product.category}
         </p>
@@ -76,12 +71,11 @@ export function ProductCard({
           </h3>
         </Link>
 
-        <p className="min-h-[1rem] text-xs text-soft-graphite">
+        <p className="min-h-[1.125rem] truncate text-xs text-soft-graphite">
           {product.packageSize}
-          {product.sellingUnit ? ` · ${product.sellingUnit}` : ""}
         </p>
 
-        <div className="mt-auto flex flex-col gap-3 pt-2">
+        <div className="mt-auto flex flex-col gap-3 pt-1">
           <div className="flex min-h-[1.75rem] items-center justify-between gap-2">
             <PriceDisplay product={product} size="md" showDemoLabel={false} />
             <AvailabilityBadge status={product.availabilityStatus} />

@@ -30,51 +30,51 @@ export function ProduceMarketCard({ product, className }: ProduceMarketCardProps
     <Link
       href={`/products/${product.slug}`}
       className={cn(
-        "group flex h-full min-h-[360px] flex-col overflow-hidden rounded-2xl border border-border-sand bg-fresh-white shadow-card transition-shadow hover:shadow-card-hover motion-reduce:transition-none",
+        "group flex h-full flex-col overflow-hidden rounded-2xl border border-border-sand bg-fresh-white shadow-card transition-shadow hover:shadow-card-hover motion-reduce:transition-none",
         className,
       )}
     >
-      <div className="relative aspect-square bg-white ring-1 ring-inset ring-border-sand/60">
+      <div className="relative aspect-square w-full shrink-0 bg-white">
         <Image
           src={src}
           alt={alt}
           fill
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-          className="object-contain p-5 transition-transform duration-300 group-hover:scale-[1.03] motion-reduce:group-hover:scale-100"
+          className="object-contain p-6 transition-transform duration-300 group-hover:scale-[1.03] motion-reduce:group-hover:scale-100"
         />
       </div>
 
-      <div className="flex flex-1 flex-col gap-2 p-4">
+      <div className="flex min-h-[168px] flex-1 flex-col gap-2 border-t border-border-sand/70 p-4">
         <h4 className="line-clamp-2 min-h-[2.75rem] font-heading text-base font-semibold leading-snug text-market-ink group-hover:text-garden-green">
           {product.title}
         </h4>
 
-        <dl className="grid min-h-[4.5rem] content-start gap-1 text-xs text-soft-graphite">
+        <dl className="grid min-h-[3.75rem] content-start gap-1 text-xs text-soft-graphite">
           {product.variety && (
             <div className="flex gap-1">
-              <dt className="font-medium">Variety:</dt>
-              <dd>{product.variety}</dd>
+              <dt className="shrink-0 font-medium">Variety:</dt>
+              <dd className="truncate">{product.variety}</dd>
             </div>
           )}
           <div className="flex gap-1">
-            <dt className="font-medium">Unit:</dt>
+            <dt className="shrink-0 font-medium">Unit:</dt>
             <dd className="line-clamp-1">{product.sellingUnit}</dd>
           </div>
           {product.netWeight && (
             <div className="flex gap-1">
-              <dt className="font-medium">Weight:</dt>
+              <dt className="shrink-0 font-medium">Weight:</dt>
               <dd>{product.netWeight}</dd>
             </div>
           )}
           {origin && (
             <div className="flex gap-1">
-              <dt className="font-medium">Origin:</dt>
+              <dt className="shrink-0 font-medium">Origin:</dt>
               <dd>{origin}</dd>
             </div>
           )}
         </dl>
 
-        <div className="mt-auto flex min-h-[1.75rem] items-center justify-between gap-2 pt-2">
+        <div className="mt-auto flex min-h-[1.75rem] items-center justify-between gap-2 pt-1">
           <PriceDisplay product={product} size="sm" showDemoLabel={false} />
           <AvailabilityBadge status={product.availabilityStatus} />
         </div>
