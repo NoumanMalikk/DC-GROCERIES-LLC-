@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { motion } from "motion/react";
 import { buttonVariants } from "@/components/ui/button";
@@ -12,107 +13,40 @@ const mosaicItems = [
   {
     slug: "gala-apples-3lb-bag",
     label: "Gala apples",
-    color: "#D84A3A",
-    shape: "apple",
+    src: "/products/gala-apples-3lb-bag/main.webp",
     grid: "col-start-1 row-start-1 col-span-2 row-span-2",
   },
   {
     slug: "navel-oranges-4lb-bag",
     label: "Navel oranges",
-    color: "#F28C28",
-    shape: "citrus",
+    src: "/products/navel-oranges-4lb-bag/main.webp",
     grid: "col-start-3 row-start-1 col-span-2 row-span-2",
   },
   {
     slug: "roma-tomatoes-2lb-pack",
     label: "Roma tomatoes",
-    color: "#D84A3A",
-    shape: "tomato",
+    src: "/products/roma-tomatoes-2lb-pack/main.webp",
     grid: "col-start-1 row-start-3 col-span-2 row-span-2",
   },
   {
     slug: "tri-color-bell-peppers-3-count",
     label: "Bell peppers",
-    color: "#386641",
-    shape: "pepper",
+    src: "/products/tri-color-bell-peppers-3-count/main.webp",
     grid: "col-start-3 row-start-3 col-span-1 row-span-2",
   },
   {
     slug: "whole-carrots-2lb-bag",
     label: "Whole carrots",
-    color: "#F28C28",
-    shape: "carrot",
+    src: "/products/whole-carrots-2lb-bag/main.webp",
     grid: "col-start-4 row-start-3 col-span-1 row-span-1",
   },
   {
     slug: "baby-spinach-10oz-clamshell",
     label: "Baby spinach",
-    color: "#386641",
-    shape: "greens",
+    src: "/products/baby-spinach-10oz-clamshell/main.webp",
     grid: "col-start-4 row-start-4 col-span-1 row-span-1",
   },
 ] as const;
-
-function ProduceShape({ shape, color }: { shape: string; color: string }) {
-  switch (shape) {
-    case "apple":
-      return (
-        <svg viewBox="0 0 80 80" className="size-full" aria-hidden="true">
-          <circle cx="40" cy="44" r="28" fill={color} opacity="0.85" />
-          <path d="M40 18 Q44 8 48 14" stroke="#386641" strokeWidth="3" fill="none" />
-          <ellipse cx="46" cy="14" rx="6" ry="3" fill="#386641" opacity="0.7" />
-        </svg>
-      );
-    case "citrus":
-      return (
-        <svg viewBox="0 0 80 80" className="size-full" aria-hidden="true">
-          <circle cx="40" cy="42" r="26" fill={color} opacity="0.9" />
-          <circle cx="40" cy="42" r="18" fill="none" stroke="#F2C94C" strokeWidth="2" opacity="0.5" />
-          <path d="M40 16 L40 68 M22 42 L58 42 M28 28 L52 56 M52 28 L28 56" stroke="#F2C94C" strokeWidth="1.5" opacity="0.4" />
-        </svg>
-      );
-    case "tomato":
-      return (
-        <svg viewBox="0 0 80 80" className="size-full" aria-hidden="true">
-          <ellipse cx="40" cy="46" rx="24" ry="22" fill={color} opacity="0.88" />
-          <path d="M32 26 Q40 18 48 26" fill="#386641" opacity="0.75" />
-        </svg>
-      );
-    case "pepper":
-      return (
-        <svg viewBox="0 0 80 80" className="size-full" aria-hidden="true">
-          <path d="M36 20 Q28 30 30 50 Q32 62 40 66 Q48 62 50 50 Q52 30 44 20 Z" fill="#D84A3A" opacity="0.85" />
-          <path d="M44 20 Q48 14 52 18 Q50 24 44 22 Z" fill="#F2C94C" opacity="0.9" />
-          <path d="M36 24 Q32 34 34 48 Q36 58 40 60 Q44 58 46 48 Q48 34 40 26 Z" fill="#386641" opacity="0.8" />
-        </svg>
-      );
-    case "carrot":
-      return (
-        <svg viewBox="0 0 80 80" className="size-full" aria-hidden="true">
-          <path d="M38 18 Q42 40 40 68 Q36 68 34 40 Q36 18 38 18" fill={color} opacity="0.9" />
-          <path d="M34 18 Q30 10 36 8 M38 16 Q42 8 46 12 M40 14 Q44 6 48 10" stroke="#386641" strokeWidth="2" fill="none" />
-        </svg>
-      );
-    case "greens":
-      return (
-        <svg viewBox="0 0 80 80" className="size-full" aria-hidden="true">
-          <ellipse cx="40" cy="52" rx="22" ry="14" fill={color} opacity="0.35" />
-          {[0, 1, 2, 3, 4].map((i) => (
-            <path
-              key={i}
-              d={`M${20 + i * 10} 58 Q${24 + i * 8} ${20 + i * 2} ${28 + i * 8} 58`}
-              fill="none"
-              stroke={color}
-              strokeWidth="3"
-              opacity="0.75"
-            />
-          ))}
-        </svg>
-      );
-    default:
-      return null;
-  }
-}
 
 export function EditorialHero() {
   const reducedMotion = useReducedMotion();
@@ -155,9 +89,9 @@ export function EditorialHero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
             >
-              Browse fresh produce, pantry staples and household basics with
-              package sizes, units and availability shown clearly—before you
-              add anything to your cart.
+              Browse fresh produce, everyday pantry goods, refrigerated items,
+              beverages, snacks and household basics through one clearly
+              organized grocery storefront.
             </motion.p>
 
             <motion.div
@@ -166,7 +100,10 @@ export function EditorialHero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
             >
-              <Link href="/shop" className={buttonVariants({ variant: "primary", size: "lg" })}>
+              <Link
+                href="/shop"
+                className={buttonVariants({ variant: "primary", size: "lg" })}
+              >
                 Shop Groceries
               </Link>
               <Link
@@ -177,43 +114,42 @@ export function EditorialHero() {
               </Link>
             </motion.div>
 
-            <VerificationNotice message="Inventory, labels and product images are verified before live fulfilment." />
+            <VerificationNotice message="Product images, package sizes and food details must match verified inventory records." />
           </div>
 
           <motion.div
-            className="relative mx-auto w-full max-w-md lg:max-w-none"
+            className="relative mx-auto w-full max-w-lg lg:max-w-none"
             initial={reducedMotion ? false : { opacity: 0, scale: 0.96 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1.2, delay: 0.2, ease: "easeOut" }}
+            transition={{ duration: 1, delay: 0.15, ease: "easeOut" }}
           >
-            <motion.div
-              className="grid grid-cols-4 grid-rows-4 gap-2 sm:gap-3"
-              animate={reducedMotion ? undefined : { scale: [1, 1.02, 1] }}
-              transition={
-                reducedMotion
-                  ? undefined
-                  : { duration: 12, repeat: Infinity, ease: "easeInOut" }
-              }
-            >
+            <div className="grid grid-cols-4 grid-rows-4 gap-2.5 sm:gap-3">
               {mosaicItems.map((item) => (
                 <Link
                   key={item.slug}
                   href={`/products/${item.slug}`}
                   className={cn(
-                    "group relative flex items-center justify-center overflow-hidden rounded-2xl border border-border-sand bg-fresh-white p-3 shadow-card transition-shadow hover:shadow-card-hover motion-reduce:transition-none",
+                    "group relative overflow-hidden rounded-2xl border border-border-sand bg-white shadow-card transition-shadow hover:shadow-card-hover motion-reduce:transition-none",
                     item.grid,
                   )}
                   aria-label={`View ${item.label}`}
                 >
-                  <div className="aspect-square w-full max-w-[100px] sm:max-w-[120px]">
-                    <ProduceShape shape={item.shape} color={item.color} />
+                  <div className="relative h-full min-h-[88px] w-full sm:min-h-[110px]">
+                    <Image
+                      src={item.src}
+                      alt={item.label}
+                      fill
+                      sizes="(max-width: 768px) 40vw, 20vw"
+                      className="object-contain p-3 transition-transform duration-500 group-hover:scale-105 motion-reduce:group-hover:scale-100"
+                      priority={item.slug === "gala-apples-3lb-bag"}
+                    />
                   </div>
-                  <span className="absolute inset-x-0 bottom-0 bg-market-ink/75 px-2 py-1.5 text-center text-[10px] font-medium text-fresh-white opacity-0 transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100 sm:text-xs">
+                  <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-market-ink/80 to-transparent px-2 pb-2 pt-6 text-center text-[10px] font-medium text-fresh-white opacity-0 transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100 sm:text-xs">
                     {item.label}
                   </span>
                 </Link>
               ))}
-            </motion.div>
+            </div>
           </motion.div>
         </div>
       </Container>

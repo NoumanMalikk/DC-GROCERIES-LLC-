@@ -1,4 +1,9 @@
-export type ImageSource = "placeholder" | "supplier" | "manufacturer" | "licensed";
+export type ImageSource =
+  | "placeholder"
+  | "supplier"
+  | "manufacturer"
+  | "licensed"
+  | "catalog_stock";
 
 export type ProductionStatus = "blocked" | "pending" | "approved";
 
@@ -29,15 +34,17 @@ function creditRecord(
     sku,
     title,
     exactVariant,
-    imageSource: "placeholder",
-    sourceOrganization: "Pending",
-    permissionBasis: "Exact product image required",
-    sourceUrlOrReference: null,
-    dateObtained: null,
+    imageSource: "catalog_stock",
+    sourceOrganization: "Licensed stock photography (Unsplash)",
+    permissionBasis:
+      "Royalty-free stock used for demo catalog presentation. Replace with exact DC Groceries inventory photography before live launch.",
+    sourceUrlOrReference: `local:public/products/*/main.webp`,
+    dateObtained: "2026-07-13",
     dateVerified: null,
     verifiedBy: null,
-    productionStatus: "blocked",
-    notes: "Exact legally usable product image unavailable. Using placeholder.",
+    productionStatus: "pending",
+    notes:
+      "Local main.webp stored under public/products/[slug]. Exact packaged-brand photography still required before productionReady.",
   };
 }
 

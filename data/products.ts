@@ -15,13 +15,13 @@ const pendingNutrition: NutritionFacts = {
   note: "Please review the physical product label before consumption. Product packaging and information may change.",
 };
 
-function placeholderImage(title: string): ProductImage {
+function productMainImage(slug: string, title: string): ProductImage {
   return {
-    src: "/products/placeholder.svg",
-    alt: `Exact product image required for ${title}`,
-    type: "placeholder",
-    width: 800,
-    height: 800,
+    src: `/products/${slug}/main.webp`,
+    alt: title,
+    type: "main",
+    width: 1000,
+    height: 1000,
   };
 }
 
@@ -87,9 +87,9 @@ function baseProduct(
   return {
     currency: "USD",
     nutritionFacts: pendingNutrition,
-    imageGallery: [placeholderImage(partial.title)],
+    imageGallery: [productMainImage(partial.slug, partial.title)],
     imageSourceRecord: `img-${partial.id}`,
-    imageVerificationStatus: "missing",
+    imageVerificationStatus: "pending",
     labelVerificationStatus: "pending",
     productionReady: false,
     brand: brand ?? null,

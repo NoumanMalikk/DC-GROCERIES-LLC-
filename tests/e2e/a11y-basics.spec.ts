@@ -16,10 +16,12 @@ test.describe("Accessibility basics", () => {
   test("primary navigation is keyboard reachable", async ({ page }) => {
     await page.goto("/");
 
-    const aboutLink = page.getByRole("navigation", { name: /main navigation/i }).getByRole("link", { name: "About" });
-    await aboutLink.focus();
+    const produceLink = page
+      .getByRole("navigation", { name: /main navigation/i })
+      .getByRole("link", { name: "Produce" });
+    await produceLink.focus();
     await page.keyboard.press("Enter");
-    await expect(page).toHaveURL(/\/about/);
+    await expect(page).toHaveURL(/\/collections\/fresh-produce/);
   });
 
   test("product cards expose accessible names", async ({ page }) => {

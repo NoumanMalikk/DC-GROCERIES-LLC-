@@ -132,10 +132,7 @@ export function BasketBuilder() {
                     <button
                       type="button"
                       onClick={() => addItem(product.id, 1)}
-                      disabled={
-                        product.availabilityStatus === "out_of_stock" ||
-                        product.temperatureClass === "refrigerated"
-                      }
+                      disabled={product.availabilityStatus === "out_of_stock"}
                       className="group flex w-full flex-col items-center gap-2 rounded-xl border border-border-sand bg-fresh-white p-3 text-left shadow-sm transition-shadow hover:shadow-card disabled:cursor-not-allowed disabled:opacity-50"
                     >
                       <div className="relative size-16">

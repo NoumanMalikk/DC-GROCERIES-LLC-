@@ -2,13 +2,7 @@
 
 import { useSyncExternalStore } from "react";
 import Link from "next/link";
-import {
-  Heart,
-  Menu,
-  Phone,
-  Search,
-  ShoppingCart,
-} from "lucide-react";
+import { Heart, Menu, Phone, Search, ShoppingCart } from "lucide-react";
 import { motion, useScroll, useTransform } from "motion/react";
 import { storeConfig } from "../../../data/store-config";
 import { useCartStore } from "@/store/cart";
@@ -21,35 +15,14 @@ import { Logo } from "@/components/shared/Logo";
 import { cn } from "@/lib/utils";
 import { MegaMenu } from "./MegaMenu";
 
-const desktopNav = [
+const primaryNav = [
   { label: "Shop All", href: "/shop", mega: true },
-  { label: "Fresh Produce", href: "/collections/fresh-produce", mega: false },
-  { label: "Pantry", href: "/collections/pantry", mega: false },
-  {
-    label: "Dairy & Refrigerated",
-    href: "/collections/dairy-refrigerated",
-    mega: false,
-    className: "hidden xl:inline-flex",
-  },
-  {
-    label: "Beverages",
-    href: "/collections/beverages",
-    mega: false,
-    className: "hidden 2xl:inline-flex",
-  },
-  {
-    label: "Snacks",
-    href: "/collections/snacks",
-    mega: false,
-    className: "hidden 2xl:inline-flex",
-  },
-  {
-    label: "Household",
-    href: "/collections/household",
-    mega: false,
-    className: "hidden 2xl:inline-flex",
-  },
-  { label: "Contact", href: "/contact", mega: false },
+  { label: "Produce", href: "/collections/fresh-produce" },
+  { label: "Pantry", href: "/collections/pantry" },
+  { label: "Dairy", href: "/collections/dairy-refrigerated", hideBelow: "xl" },
+  { label: "Drinks", href: "/collections/beverages", hideBelow: "xl" },
+  { label: "Snacks", href: "/collections/snacks", hideBelow: "2xl" },
+  { label: "Household", href: "/collections/household", hideBelow: "2xl" },
 ];
 
 function subscribe() {
@@ -70,44 +43,34 @@ export function Header() {
   const cartCount = useCartStore((s) => s.getItemCount());
   const wishlistCount = useWishlistStore((s) => s.getItemCount());
 
-  const backgroundOpacity = useTransform(scrollY, [0, 80], [0, 1]);
-  const borderOpacity = useTransform(scrollY, [0, 80], [0, 1]);
-  const shadowOpacity = useTransform(scrollY, [0, 80], [0, 0.08]);
+  const backgroundOpacity = useTransform(scrollY, [0, 60], [0.92, 1]);
+  const borderOpacity = useTransform(scrollY, [0, 60], [0.4, 1]);
   const borderColor = useTransform(
     borderOpacity,
     (v) => `rgba(221, 212, 197, ${v})`,
-  );
-  const boxShadow = useTransform(
-    shadowOpacity,
-    (v) => `0 4px 20px rgba(24, 51, 44, ${v})`,
   );
 
   return (
     <header className="sticky top-0 z-50">
       <motion.div
-        className="pointer-events-none absolute inset-0 border-b bg-fresh-white"
+        className="pointer-events-none absolute inset-0 border-b bg-fresh-white/95 backdrop-blur-md"
         style={
           reducedMotion
             ? { opacity: 1, borderColor: "var(--color-border-sand)" }
-            : {
-                opacity: backgroundOpacity,
-                borderColor,
-                boxShadow,
-              }
+            : { opacity: backgroundOpacity, borderColor }
         }
         aria-hidden="true"
       />
 
       <Container className="relative">
-        <div className="flex h-16 items-center justify-between gap-3 lg:h-[4.5rem]">
-          <div className="flex items-center gap-2 sm:gap-3">
+        <div className="flex h-[4.25rem] items-center justify-between gap-4 lg:h-[4.75rem]">
+          <div className="flex min-w-0 items-center gap-2">
             <Button
               variant="ghost"
               size="icon"
               className="lg:hidden"
               onClick={toggleMobileNav}
               aria-label="Open menu"
-              aria-expanded={false}
               aria-controls="mobile-nav"
             >
               <Menu />
@@ -115,57 +78,69 @@ export function Header() {
 
             <Link
               href="/"
-              className="rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+              className="rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
               onClick={closeAllOverlays}
               aria-label={`${storeConfig.brandName} home`}
             >
               <span className="hidden sm:block">
-                <Logo variant="horizontal" className="h-9 w-auto lg:h-10" />
+                <Logo variant="horizontal" className="h-10 w-auto" />
               </span>
               <span className="sm:hidden">
-                <Logo variant="monogram" className="size-9" width={36} height={36} />
+                <Logo variant="monogram" className="size-10" />
               </span>
             </Link>
           </div>
 
           <nav
-            className="hidden items-center gap-0.5 lg:flex"
+            className="hidden items-center gap-1 lg:flex"
             aria-label="Main navigation"
           >
-            {desktopNav.map((link) =>
-              link.mega ? (
-                <button
-                  key={link.label}
-                  type="button"
-                  className={cn(
-                    "rounded-md px-2.5 py-2 text-sm font-semibold text-market-ink transition-colors xl:px-3",
-                    "hover:bg-produce-mist focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
-                    megaMenuOpen && "bg-produce-mist text-garden-green",
-                  )}
-                  onClick={toggleMegaMenu}
-                  aria-expanded={megaMenuOpen}
-                  aria-controls="mega-menu"
-                  aria-haspopup="true"
-                >
-                  {link.label}
-                </button>
-              ) : (
+            {primaryNav.map((link) => {
+              const hideClass =
+                link.hideBelow === "xl"
+                  ? "hidden xl:inline-flex"
+                  : link.hideBelow === "2xl"
+                    ? "hidden 2xl:inline-flex"
+                    : "inline-flex";
+
+              if (link.mega) {
+                return (
+                  <button
+                    key={link.label}
+                    type="button"
+                    className={cn(
+                      hideClass,
+                      "items-center rounded-full px-3.5 py-2 text-sm font-semibold text-market-ink transition-colors",
+                      "hover:bg-produce-mist focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
+                      megaMenuOpen && "bg-produce-mist text-garden-green",
+                    )}
+                    onClick={toggleMegaMenu}
+                    aria-expanded={megaMenuOpen}
+                    aria-controls="mega-menu"
+                    aria-haspopup="true"
+                  >
+                    {link.label}
+                  </button>
+                );
+              }
+
+              return (
                 <Link
                   key={link.label}
                   href={link.href}
                   className={cn(
-                    "rounded-md px-2.5 py-2 text-sm font-medium text-market-ink transition-colors hover:bg-produce-mist hover:text-garden-green focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 xl:px-3",
-                    link.className,
+                    hideClass,
+                    "items-center rounded-full px-3.5 py-2 text-sm font-medium text-market-ink/90 transition-colors hover:bg-produce-mist hover:text-market-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
                   )}
                   onClick={closeAllOverlays}
                 >
                   {link.label}
                 </Link>
-              ),
-            )}
+              );
+            })}
           </nav>
 
-          <div className="flex items-center gap-1 sm:gap-2">
+          <div className="flex items-center gap-1.5">
             <Link
               href="/search"
               className={cn(
@@ -194,15 +169,16 @@ export function Header() {
             </Link>
 
             <Button
-              variant="ghost"
-              size="icon"
+              variant="primary"
+              size="sm"
               onClick={toggleCartDrawer}
               aria-label={`Cart${mounted && cartCount > 0 ? `, ${cartCount} items` : ""}`}
-              className="relative"
+              className="relative gap-2 rounded-full px-3.5"
             >
-              <ShoppingCart />
+              <ShoppingCart className="size-4" />
+              <span className="hidden sm:inline">Cart</span>
               {mounted && cartCount > 0 && (
-                <span className="absolute -right-0.5 -top-0.5 flex size-4 items-center justify-center rounded-full bg-citrus-orange text-[10px] font-bold text-fresh-white">
+                <span className="absolute -right-1 -top-1 flex size-5 items-center justify-center rounded-full bg-citrus-orange text-[10px] font-bold text-market-ink ring-2 ring-fresh-white">
                   {cartCount > 9 ? "9+" : cartCount}
                 </span>
               )}
@@ -211,13 +187,12 @@ export function Header() {
             <a
               href={`tel:${storeConfig.phoneE164}`}
               className={cn(
-                buttonVariants({ variant: "outline", size: "sm" }),
-                "hidden md:inline-flex gap-1.5",
+                buttonVariants({ variant: "outline", size: "icon" }),
+                "hidden rounded-full md:inline-flex",
               )}
               aria-label={`Call ${storeConfig.phoneDisplay}`}
             >
-              <Phone className="size-3.5" />
-              <span className="hidden lg:inline">Call</span>
+              <Phone className="size-4" />
             </a>
           </div>
         </div>

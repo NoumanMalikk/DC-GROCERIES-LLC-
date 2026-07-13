@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { Container } from "@/components/shared/Container";
@@ -7,30 +8,34 @@ import { cn } from "@/lib/utils";
 const moments = [
   {
     title: "Start the Morning",
-    description: "Oats, fruit, eggs and juice for a clear breakfast shop.",
+    description: "Oats, milk, eggs, bananas and breakfast staples.",
     href: "/collections/breakfast",
-    accent: "bg-citrus-orange/15 border-citrus-orange/30 hover:border-citrus-orange/60",
+    image: "/products/cavendish-bananas-2lb-bunch/main.webp",
+    accent: "from-[#F28C28]/25 to-oat-cream",
     label: "Breakfast",
   },
   {
     title: "Build the Dinner",
-    description: "Produce and pantry items for everyday cooking.",
+    description: "Rice, pasta, vegetables, beans and cooking essentials.",
     href: "/shop?moment=dinner",
-    accent: "bg-tomato-red/10 border-tomato-red/25 hover:border-tomato-red/50",
+    image: "/products/roma-tomatoes-2lb-pack/main.webp",
+    accent: "from-[#D84A3A]/20 to-oat-cream",
     label: "Dinner",
   },
   {
     title: "Refresh the Fridge",
-    description: "Dairy and refrigerated items when fulfilment is ready.",
+    description: "Produce, dairy and chilled grocery basics.",
     href: "/collections/dairy-refrigerated",
-    accent: "bg-market-ink/5 border-market-ink/15 hover:border-market-ink/30",
+    image: "/products/whole-milk-1-gallon/main.webp",
+    accent: "from-[#18332C]/15 to-oat-cream",
     label: "Refrigerated",
   },
   {
     title: "Restock the Pantry",
-    description: "Rice, pasta, beans, oil and canned goods.",
+    description: "Grains, canned items, oils and seasonings.",
     href: "/collections/pantry",
-    accent: "bg-corn-yellow/20 border-corn-yellow/40 hover:border-corn-yellow/70",
+    image: "/products/long-grain-white-rice-5lb/main.webp",
+    accent: "from-[#F2C94C]/30 to-oat-cream",
     label: "Pantry",
   },
 ] as const;
@@ -50,26 +55,42 @@ export function KitchenMoments() {
             <Link
               key={moment.href}
               href={moment.href}
-              className={cn(
-                "group relative flex min-h-[180px] flex-col justify-between rounded-2xl border p-6 shadow-card transition-all hover:shadow-card-hover motion-reduce:transition-none sm:min-h-[200px] sm:p-8",
-                moment.accent,
-              )}
+              className="group relative flex min-h-[220px] overflow-hidden rounded-2xl border border-border-sand bg-fresh-white shadow-card transition-all hover:shadow-card-hover motion-reduce:transition-none sm:min-h-[240px]"
             >
-              <div>
-                <span className="text-xs font-semibold uppercase tracking-wider text-soft-graphite">
-                  {moment.label}
+              <div
+                className={cn(
+                  "absolute inset-0 bg-gradient-to-br opacity-90",
+                  moment.accent,
+                )}
+              />
+              <div className="relative z-10 flex flex-1 flex-col justify-between p-6 sm:p-8">
+                <div>
+                  <span className="text-xs font-semibold uppercase tracking-wider text-soft-graphite">
+                    {moment.label}
+                  </span>
+                  <h3 className="mt-2 font-heading text-2xl font-semibold text-market-ink sm:text-3xl">
+                    {moment.title}
+                  </h3>
+                  <p className="mt-2 max-w-xs text-sm leading-relaxed text-soft-graphite">
+                    {moment.description}
+                  </p>
+                </div>
+                <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-market-ink group-hover:text-garden-green">
+                  Browse
+                  <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </span>
-                <h3 className="mt-2 font-heading text-2xl font-semibold text-market-ink sm:text-3xl">
-                  {moment.title}
-                </h3>
-                <p className="mt-2 max-w-sm text-sm leading-relaxed text-soft-graphite">
-                  {moment.description}
-                </p>
               </div>
-              <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-market-ink group-hover:text-garden-green">
-                Browse
-                <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-              </span>
+              <div className="relative z-10 hidden w-[42%] sm:block">
+                <div className="absolute inset-3 overflow-hidden rounded-xl bg-white/80 shadow-sm ring-1 ring-border-sand/60">
+                  <Image
+                    src={moment.image}
+                    alt=""
+                    fill
+                    sizes="200px"
+                    className="object-contain p-4 transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+              </div>
             </Link>
           ))}
         </div>

@@ -1,16 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="DC Groceries favicon">
-  <title>DC Groceries Favicon</title>
-  <rect width="32" height="32" rx="6" fill="#18332C" />
-  <g transform="translate(2 2) scale(0.28)">
-    <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
-      fill="#F8F2E7"
-      d="M8 10h26c16 0 22 8 22 22v26c0 14-6 22-22 22H8V10zm22 16c5-4 12 0 12 7s-6 11-12 9c-6-2-6-10 0-16z"
-    />
-    <path
-      fill="#FFFFFF"
-      d="M58 16c22-4 34 10 34 28s-12 36-34 34c-5-1-9-4-11-8l9-9c9 7 20 2 22-8 2-10-5-20-16-22-3-1-6 0-8 2l-6-7z"
-    />
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="DC Groceries">
+  <title>DC Groceries favicon</title>
+  <rect width="64" height="64" rx="14" fill="#18332C"/>
+  <text x="32" y="42" text-anchor="middle" font-family="Manrope, Arial Black, Arial, sans-serif" font-size="26" font-weight="800" fill="#F8F2E7" letter-spacing="-1">DC</text>
+  <circle cx="50" cy="16" r="5" fill="#F28C28"/>
 </svg>

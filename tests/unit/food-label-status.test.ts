@@ -1,6 +1,8 @@
 import { describe, expect, it } from "vitest";
 import { products } from "@data/products";
 import { imageCredits } from "@data/image-credits";
+import { existsSync } from "node:fs";
+import { join } from "node:path";
 
 describe("food and label verification status", () => {
   it("all catalog products start with pending label verification", () => {
@@ -9,18 +11,21 @@ describe("food and label verification status", () => {
     }
   });
 
-  it("all catalog products use missing image verification status", () => {
+  it("all catalog products keep pending image verification until inventory photos are approved", () => {
     for (const product of products) {
-      expect(product.imageVerificationStatus).toBe("missing");
+      expect(product.imageVerificationStatus).toBe("pending");
+      expect(product.productionReady).toBe(false);
     }
   });
 
-  it("placeholder images are used until exact photography is verified", () => {
+  it("every product has a local main.webp catalog image", () => {
     for (const product of products) {
       const primary = product.imageGallery[0];
-      expect(primary.type).toBe("placeholder");
-      expect(primary.src).toBe("/products/placeholder.svg");
-      expect(primary.alt).toContain("Exact product image required");
+      expect(primary.type).toBe("main");
+      expect(primary.src).toBe(`/products/${product.slug}/main.webp`);
+      expect(
+        existsSync(join(process.cwd(), "public", "products", product.slug, "main.webp")),
+      ).toBe(true);
     }
   });
 
@@ -36,7 +41,6 @@ describe("food and label verification status", () => {
     const skuSet = new Set(products.map((p) => p.sku));
     for (const record of imageCredits) {
       expect(skuSet.has(record.sku)).toBe(true);
-      expect(record.productionStatus).toBe("blocked");
     }
   });
 });

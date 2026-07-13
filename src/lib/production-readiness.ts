@@ -48,6 +48,7 @@ export function canPurchaseProduct(
   }
 
   if (
+    storeMode === "live" &&
     product.temperatureClass === "refrigerated" &&
     !canShipRefrigeratedItems()
   ) {
