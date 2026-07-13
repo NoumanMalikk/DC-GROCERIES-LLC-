@@ -68,7 +68,7 @@ export function CheckoutSummary({
             <span className="tabular-nums text-market-ink">
               {shipping
                 ? formatPrice(shippingCents, { cents: true })
-                : "—"}
+                : "-"}
             </span>
           </div>
           <div className="flex justify-between">
@@ -76,7 +76,7 @@ export function CheckoutSummary({
             <span className="tabular-nums text-market-ink">
               {tax
                 ? formatPrice(taxCents, { cents: true })
-                : "—"}
+                : "-"}
             </span>
           </div>
         </div>

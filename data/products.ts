@@ -129,7 +129,7 @@ export const products: Product[] = [
     demoPrice: 5.49,
     shortDescription: "Gala apples sold in a three-pound produce bag.",
     longDescription:
-      "Demonstration catalog listing for Gala apples in a 3 lb bag. Exact packaging, origin and label details require physical inventory verification before live sale.",
+      "Crisp Gala apples in a 3 lb bag. Ideal for snacking, lunch boxes and everyday baking.",
     temperatureClass: "ambient",
     availabilityStatus: "verification_required",
     relatedProductIds: ["prod-002", "prod-003", "prod-005"],
@@ -160,7 +160,7 @@ export const products: Product[] = [
     demoPrice: 1.79,
     shortDescription: "Ripe yellow Cavendish banana bunch sold by approximate weight.",
     longDescription:
-      "Demonstration listing for Cavendish bananas sold as an approximately 2 lb bunch. Final price may change based on actual fulfilled weight once weight-based fulfilment is configured.",
+      "Cavendish bananas sold as an approximately 2 lb bunch. Final price may adjust based on actual fulfilled weight.",
     temperatureClass: "ambient",
     availabilityStatus: "verification_required",
     relatedProductIds: ["prod-001", "prod-005", "prod-016"],
@@ -191,7 +191,7 @@ export const products: Product[] = [
     demoPrice: 6.49,
     shortDescription: "Navel oranges in a four-pound produce bag.",
     longDescription:
-      "Demonstration catalog listing for Navel oranges in a 4 lb bag. Variety and package format must match verified inventory photography.",
+      "Sweet Navel oranges in a 4 lb bag. Easy to peel and great for fresh juice or snacking.",
     temperatureClass: "ambient",
     availabilityStatus: "verification_required",
     relatedProductIds: ["prod-001", "prod-004", "prod-024"],
@@ -222,7 +222,7 @@ export const products: Product[] = [
     demoPrice: 5.99,
     shortDescription: "Seedless red grapes in a two-pound clamshell.",
     longDescription:
-      "Demonstration listing for seedless red grapes in a 2 lb clamshell. Primary image must show the exact clamshell format.",
+      "Seedless red grapes in a 2 lb clamshell. Ready to rinse and serve.",
     temperatureClass: "refrigerated",
     availabilityStatus: "verification_required",
     relatedProductIds: ["prod-005", "prod-001", "prod-003"],
@@ -253,7 +253,7 @@ export const products: Product[] = [
     demoPrice: 4.49,
     shortDescription: "Fresh strawberries in a one-pound clamshell.",
     longDescription:
-      "Demonstration listing for fresh strawberries in a 1 lb clamshell. Bowl presentations are not accepted as the primary product image.",
+      "Fresh strawberries in a 1 lb clamshell. Bright, ripe berries for breakfast or dessert.",
     temperatureClass: "refrigerated",
     availabilityStatus: "verification_required",
     relatedProductIds: ["prod-004", "prod-002", "prod-001"],
@@ -284,7 +284,7 @@ export const products: Product[] = [
     demoPrice: 3.79,
     shortDescription: "Elongated Roma tomatoes in a two-pound pack.",
     longDescription:
-      "Demonstration listing for Roma tomatoes. Images must show elongated Roma shape, not round, cherry or vine tomatoes.",
+      "Roma tomatoes in a 2 lb pack. Firm, meaty tomatoes suited for sauces, roasting and salads.",
     temperatureClass: "ambient",
     availabilityStatus: "verification_required",
     relatedProductIds: ["prod-007", "prod-019", "prod-013"],
@@ -315,7 +315,7 @@ export const products: Product[] = [
     demoPrice: 4.99,
     shortDescription: "Three-count pack with red, yellow and orange bell peppers.",
     longDescription:
-      "Demonstration listing for a tri-color bell pepper pack. Exact image must show one red, one yellow and one orange pepper when that is the configured pack.",
+      "Tri-color bell peppers, 3 count pack. A mix of red, yellow and orange peppers for cooking and salads.",
     temperatureClass: "ambient",
     availabilityStatus: "verification_required",
     relatedProductIds: ["prod-006", "prod-008", "prod-014"],
@@ -346,7 +346,7 @@ export const products: Product[] = [
     demoPrice: 3.49,
     shortDescription: "Yellow onions in a three-pound produce bag.",
     longDescription:
-      "Demonstration listing for yellow onions in a 3 lb bag. Do not substitute white or red onion imagery.",
+      "Yellow onions in a 3 lb bag. Everyday cooking onions with a mild, savory flavor.",
     temperatureClass: "ambient",
     availabilityStatus: "verification_required",
     relatedProductIds: ["prod-009", "prod-014", "prod-010"],
@@ -377,7 +377,7 @@ export const products: Product[] = [
     demoPrice: 4.99,
     shortDescription: "Russet potatoes in a five-pound bag.",
     longDescription:
-      "Demonstration listing for Russet potatoes in a 5 lb bag. Primary image must show the bagged format.",
+      "Russet potatoes in a 5 lb bag. Classic baking and mashing potatoes for weeknight meals.",
     temperatureClass: "ambient",
     availabilityStatus: "verification_required",
     relatedProductIds: ["prod-008", "prod-010", "prod-011"],
@@ -408,7 +408,7 @@ export const products: Product[] = [
     demoPrice: 2.49,
     shortDescription: "Whole carrots in a two-pound bag.",
     longDescription:
-      "Demonstration listing for whole carrots. Baby carrots, loose carrots or chopped carrots are not accepted as primary imagery.",
+      "Whole carrots in a 2 lb bag. Crisp carrots for roasting, soups and snacks.",
     temperatureClass: "ambient",
     availabilityStatus: "verification_required",
     relatedProductIds: ["prod-009", "prod-011", "prod-012"],
@@ -439,7 +439,7 @@ export const products: Product[] = [
     demoPrice: 3.99,
     shortDescription: "Fresh broccoli crowns sold by approximate weight.",
     longDescription:
-      "Demonstration listing for broccoli crowns. Weight-based pricing must be confirmed during fulfilment. Frozen florets are not accepted imagery.",
+      "Fresh broccoli crowns, approximately 1.5 lb. Price may adjust based on actual fulfilled weight.",
     temperatureClass: "refrigerated",
     availabilityStatus: "verification_required",
     relatedProductIds: ["prod-012", "prod-010", "prod-006"],
@@ -470,7 +470,7 @@ export const products: Product[] = [
     demoPrice: 3.99,
     shortDescription: "Baby spinach in a ten-ounce clamshell.",
     longDescription:
-      "Demonstration listing for baby spinach in a 10 oz clamshell. Mixed greens, kale or bag substitutes are not accepted as primary imagery.",
+      "Baby spinach in a 10 oz clamshell. Tender greens for salads, smoothies and sauteing.",
     temperatureClass: "refrigerated",
     availabilityStatus: "verification_required",
     relatedProductIds: ["prod-011", "prod-013", "prod-006"],
@@ -501,7 +501,7 @@ export const products: Product[] = [
     demoPrice: 1.19,
     shortDescription: "Fresh cilantro sold as one bunch.",
     longDescription:
-      "Demonstration listing for a fresh cilantro bunch. Flat-leaf parsley or chopped packaged cilantro must not be used as the primary image.",
+      "Fresh cilantro, 1 bunch. Bright herb flavor for salsa, marinades and garnishes.",
     temperatureClass: "refrigerated",
     availabilityStatus: "verification_required",
     relatedProductIds: ["prod-014", "prod-006", "prod-007"],
@@ -532,7 +532,7 @@ export const products: Product[] = [
     demoPrice: 3.49,
     shortDescription: "Fresh garlic in a five-bulb pack.",
     longDescription:
-      "Demonstration listing for a five-bulb garlic pack. Peeled garlic, paste or shallots are not accepted substitutes.",
+      "Fresh garlic, 5 bulb pack. Whole bulbs for roasting, sauces and everyday cooking.",
     temperatureClass: "ambient",
     availabilityStatus: "verification_required",
     relatedProductIds: ["prod-013", "prod-008", "prod-006"],
@@ -564,7 +564,7 @@ export const products: Product[] = [
     demoPrice: 7.49,
     shortDescription: "Long grain white rice in a five-pound bag.",
     longDescription:
-      "Demonstration pantry listing. Exact brand and package artwork must be verified. Basmati or jasmine substitutes are not permitted.",
+      "Long grain white rice in a 5 lb bag. A pantry staple for weeknight meals and meal prep.",
     temperatureClass: "ambient",
     availabilityStatus: "verification_required",
     relatedProductIds: ["prod-017", "prod-018", "prod-019"],
@@ -596,7 +596,7 @@ export const products: Product[] = [
     demoPrice: 6.49,
     shortDescription: "Old-fashioned rolled oats in a 42 oz container.",
     longDescription:
-      "Demonstration listing for old-fashioned rolled oats. Instant packets or steel-cut oats are not accepted substitutes.",
+      "Old-fashioned rolled oats in a 42 oz container. Hearty oats for breakfast and baking.",
     temperatureClass: "ambient",
     availabilityStatus: "verification_required",
     relatedProductIds: ["prod-002", "prod-021", "prod-022"],
@@ -628,7 +628,7 @@ export const products: Product[] = [
     demoPrice: 2.29,
     shortDescription: "Spaghetti pasta in a sixteen-ounce box.",
     longDescription:
-      "Demonstration listing for spaghetti pasta. Penne, linguine or multipack imagery must not be used.",
+      "Spaghetti pasta in a 16 oz box. Classic long pasta for sauces and weeknight dinners.",
     temperatureClass: "ambient",
     availabilityStatus: "verification_required",
     relatedProductIds: ["prod-015", "prod-019", "prod-006"],
@@ -660,7 +660,7 @@ export const products: Product[] = [
     demoPrice: 1.49,
     shortDescription: "Canned black beans in a fifteen-ounce can.",
     longDescription:
-      "Demonstration listing for canned black beans. Kidney beans, dry beans or multipacks are not accepted substitutes.",
+      "Black beans in a 15 oz can. Ready for tacos, bowls, soups and sides.",
     temperatureClass: "ambient",
     availabilityStatus: "verification_required",
     relatedProductIds: ["prod-019", "prod-015", "prod-006"],
@@ -692,7 +692,7 @@ export const products: Product[] = [
     demoPrice: 1.69,
     shortDescription: "Diced tomatoes in a 14.5 oz can.",
     longDescription:
-      "Demonstration listing for diced tomatoes. Tomato sauce, crushed tomatoes or flavored varieties require a matching title before use.",
+      "Diced tomatoes in a 14.5 oz can. Convenient base for sauces, chili and stews.",
     temperatureClass: "ambient",
     availabilityStatus: "verification_required",
     relatedProductIds: ["prod-018", "prod-006", "prod-017"],
@@ -724,7 +724,7 @@ export const products: Product[] = [
     demoPrice: 5.99,
     shortDescription: "Vegetable cooking oil in a 48 fl oz bottle.",
     longDescription:
-      "Demonstration listing for vegetable cooking oil. Canola, olive oil or gallon containers are not accepted substitutes.",
+      "Vegetable cooking oil in a 48 fl oz bottle. Everyday oil for frying, sauteing and baking.",
     temperatureClass: "ambient",
     availabilityStatus: "verification_required",
     relatedProductIds: ["prod-015", "prod-017", "prod-009"],
@@ -756,7 +756,7 @@ export const products: Product[] = [
     demoPrice: 4.49,
     shortDescription: "Grade A large white eggs in a twelve-count carton.",
     longDescription:
-      "Demonstration refrigerated listing. Grade, size and carton count must be verified. Shipping is blocked until refrigerated fulfilment is configured.",
+      "Grade A large white eggs, 12 count. Refrigerated carton for baking and breakfast.",
     temperatureClass: "refrigerated",
     availabilityStatus: "verification_required",
     relatedProductIds: ["prod-022", "prod-023", "prod-016"],
@@ -788,7 +788,7 @@ export const products: Product[] = [
     demoPrice: 4.39,
     shortDescription: "Whole milk in a one-gallon container.",
     longDescription:
-      "Demonstration refrigerated listing for whole milk. Two-percent, half-gallon or plant-based beverages are not accepted substitutes. Purchase blocked until refrigeration readiness is complete.",
+      "Whole milk, 1 gallon. Creamy refrigerated milk for drinking, cereal and recipes.",
     temperatureClass: "refrigerated",
     availabilityStatus: "verification_required",
     relatedProductIds: ["prod-021", "prod-023", "prod-016"],
@@ -820,7 +820,7 @@ export const products: Product[] = [
     demoPrice: 6.49,
     shortDescription: "Plain Greek yogurt in a thirty-two-ounce tub.",
     longDescription:
-      "Demonstration refrigerated listing for plain Greek yogurt. Vanilla flavor, regular yogurt or individual cups are not accepted substitutes.",
+      "Plain Greek yogurt in a 32 oz tub. Thick, protein-rich yogurt for breakfast and cooking.",
     temperatureClass: "refrigerated",
     availabilityStatus: "verification_required",
     relatedProductIds: ["prod-021", "prod-022", "prod-005"],
@@ -852,7 +852,7 @@ export const products: Product[] = [
     demoPrice: 4.29,
     shortDescription: "100% apple juice in a sixty-four fluid ounce bottle.",
     longDescription:
-      "Demonstration beverage listing. The 100% claim must match the verified physical label. Apple drinks or juice cocktails are not accepted substitutes.",
+      "100% apple juice in a 64 fl oz bottle. Refreshing juice for the family fridge.",
     temperatureClass: "ambient",
     availabilityStatus: "verification_required",
     relatedProductIds: ["prod-001", "prod-003", "prod-025"],
@@ -884,7 +884,7 @@ export const products: Product[] = [
     demoPrice: 3.49,
     shortDescription: "Sea salt popcorn in a seven-ounce bag.",
     longDescription:
-      "Demonstration snack listing. Butter, cheese or microwave popcorn boxes are not accepted substitutes.",
+      "Sea salt popcorn in a 7 oz bag. Light, salty snack for sharing.",
     temperatureClass: "ambient",
     availabilityStatus: "verification_required",
     relatedProductIds: ["prod-024", "prod-016"],
@@ -916,7 +916,7 @@ export const products: Product[] = [
     demoPrice: 11.99,
     shortDescription: "Ultra paper towels in a six double-roll pack.",
     longDescription:
-      "Demonstration household listing. Eight-roll packs, toilet paper or single-roll presentations are not accepted. Absorbency and sheet-count claims require label verification.",
+      "Ultra paper towels, 6 double rolls. Absorbent household towels for kitchen and cleanup.",
     temperatureClass: "household",
     availabilityStatus: "verification_required",
     relatedProductIds: [],

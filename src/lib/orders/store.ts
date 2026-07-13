@@ -42,7 +42,7 @@ async function ensureLoaded(): Promise<void> {
       idempotencyIndex.set(key, value);
     }
   } catch {
-    // File does not exist yet — start with empty store.
+    // File does not exist yet - start with empty store.
   }
 
   loaded = true;
@@ -134,7 +134,7 @@ export async function saveIdempotentCheckout(
   await persist();
 }
 
-/** Clears in-memory store — for tests only. */
+/** Clears in-memory store - for tests only. */
 export function resetOrderStore(): void {
   memoryStore.clear();
   sessionIndex.clear();

@@ -104,7 +104,7 @@ export function ProductGallery({ product, className }: ProductGalleryProps) {
 
         {isPlaceholder && (
           <p className="absolute bottom-0 left-0 right-0 bg-market-ink/80 px-3 py-2 text-center text-xs text-fresh-white">
-            Placeholder image — exact product photo required
+            Placeholder image - exact product photo required
           </p>
         )}
       </div>
@@ -144,7 +144,7 @@ export function ProductGallery({ product, className }: ProductGalleryProps) {
           showClose
         >
           <DialogTitle className="sr-only">
-            {product.title} — fullscreen image
+            {product.title} - fullscreen image
           </DialogTitle>
           <div className="relative aspect-square w-full">
             <Image

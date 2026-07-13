@@ -24,8 +24,8 @@ export default function AboutPage() {
         <p>
           {storeConfig.legalName} is a {storeConfig.publicLocationLabel}-based
           grocery retailer offering an online catalog of produce, pantry goods
-          and other everyday grocery items. We focus on clear product details—
-          package sizes, variety names and straightforward descriptions—so you
+          and other everyday grocery items. We focus on clear product details - 
+          package sizes, variety names and straightforward descriptions - so you
           can shop with confidence.
         </p>
 
@@ -43,10 +43,9 @@ export default function AboutPage() {
         )}
 
         <p>
-          This storefront may operate in demonstration mode while inventory,
-          label verification and fulfilment processes are completed. You can
-          browse the full catalog and explore checkout; items that are not
-          production-ready may be restricted at purchase.
+          Browse the full catalog, build your basket and check out securely.
+          Product details, package sizes and availability are confirmed before
+          fulfilment.
         </p>
 
         <div className="rounded-xl border border-border-sand bg-fresh-white p-6">
@@ -63,7 +62,7 @@ export default function AboutPage() {
               </Link>
               <span className="text-soft-graphite">
                 {" "}
-                — how we present product and label details
+ - how we present product and label details
               </span>
             </li>
             <li>
@@ -75,7 +74,7 @@ export default function AboutPage() {
               </Link>
               <span className="text-soft-graphite">
                 {" "}
-                — questions about products, orders or this website
+ - questions about products, orders or this website
               </span>
             </li>
             <li>
@@ -87,7 +86,7 @@ export default function AboutPage() {
               </Link>
               <span className="text-soft-graphite">
                 {" "}
-                — common questions about ordering and products
+ - common questions about ordering and products
               </span>
             </li>
           </ul>

@@ -40,7 +40,7 @@ export function ProduceMarketBoard() {
         <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <SectionHeading
             title="Fresh produce, clearly presented."
-            description="Variety, unit, weight and availability shown for every item—no guesswork at the shelf."
+            description="Variety, unit, weight and availability shown for every item - no guesswork at the shelf."
           />
           <Link
             href="/collections/fresh-produce"

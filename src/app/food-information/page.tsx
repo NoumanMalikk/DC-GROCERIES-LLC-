@@ -25,7 +25,7 @@ export default function FoodInformationPage() {
       ]}
     >
       <VerificationNotice
-        message="Information on this page is for general guidance only—not medical or dietary advice. Always read the physical product label."
+        message="Information on this page is for general guidance only - not medical or dietary advice. Always read the physical product label."
         className="mb-8"
       />
 

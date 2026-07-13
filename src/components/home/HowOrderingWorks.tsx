@@ -6,7 +6,7 @@ const steps = [
     number: "01",
     title: "Browse with clarity",
     description:
-      "Every listing shows package size, selling unit, variety and availability status—before you add to cart.",
+      "Every listing shows package size, selling unit, variety and availability status - before you add to cart.",
   },
   {
     number: "02",
@@ -18,7 +18,7 @@ const steps = [
     number: "03",
     title: "Review before checkout",
     description:
-      "Confirm items, units and demo prices. Product availability is verified before fulfilment begins.",
+      "Confirm items, units and prices. Product availability is verified before fulfilment begins.",
   },
   {
     number: "04",
@@ -34,7 +34,7 @@ export function HowOrderingWorks() {
       <Container>
         <SectionHeading
           title="How ordering works"
-          description="A straightforward path from browsing to checkout—without delivery promises we cannot yet confirm."
+          description="A straightforward path from browsing to checkout - without delivery promises we cannot yet confirm."
           className="mb-10"
         />
 

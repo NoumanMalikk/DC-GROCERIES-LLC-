@@ -4,7 +4,6 @@ import { Snowflake } from "lucide-react";
 import { getProductBySlug } from "@/lib/products";
 import { getProductMainImage } from "@/lib/format";
 import { canShipRefrigeratedItems } from "@data/shipping-rules";
-import { isDemoMode } from "@data/store-config";
 import { AvailabilityBadge } from "@/components/shared/AvailabilityBadge";
 import { PriceDisplay } from "@/components/shared/PriceDisplay";
 import { Container } from "@/components/shared/Container";
@@ -24,7 +23,6 @@ export function RefrigeratedEssentials() {
     .filter(Boolean);
 
   const refrigerationReady = canShipRefrigeratedItems();
-  const showDemoNotice = isDemoMode() || !refrigerationReady;
 
   return (
     <section className="bg-oat-cream py-14 sm:py-16">
@@ -34,7 +32,7 @@ export function RefrigeratedEssentials() {
             title="Refrigerated essentials"
             description="Eggs, milk and yogurt with clear package sizes. Live shipping for temperature-sensitive items requires cold-chain configuration."
           />
-          {showDemoNotice && (
+          {!refrigerationReady && (
             <Badge variant="warning" className="shrink-0 self-start">
               <Snowflake className="size-3" />
               Cold-chain pending
@@ -42,14 +40,13 @@ export function RefrigeratedEssentials() {
           )}
         </div>
 
-        {showDemoNotice && (
+        {!refrigerationReady && (
           <div
             role="status"
             className="mb-8 rounded-xl border border-border-sand bg-fresh-white px-4 py-3 text-sm text-soft-graphite"
           >
-            Demo shopping is enabled so you can test cart and checkout flows.
-            Live refrigerated fulfilment remains disabled until shipping rules
-            are approved.
+            Refrigerated fulfilment remains disabled until cold-chain shipping
+            is configured. You can still browse these items in the catalog.
           </div>
         )}
 
@@ -83,11 +80,7 @@ export function RefrigeratedEssentials() {
                       {product.packageSize}
                     </p>
                     <div className="flex items-center justify-between gap-2">
-                      <PriceDisplay
-                        product={product}
-                        size="sm"
-                        showDemoLabel={false}
-                      />
+                      <PriceDisplay product={product} size="sm" />
                       <AvailabilityBadge status={product.availabilityStatus} />
                     </div>
                     <AddToCartButton

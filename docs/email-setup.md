@@ -34,8 +34,8 @@ Recommended addresses:
 
 | Address | Use |
 |---------|-----|
-| `orders@yourdomain.com` | `EMAIL_FROM` — transactional |
-| `hello@yourdomain.com` | `CONTACT_EMAIL` — customer inquiries |
+| `orders@yourdomain.com` | `EMAIL_FROM` - transactional |
+| `hello@yourdomain.com` | `CONTACT_EMAIL` - customer inquiries |
 | `noreply@yourdomain.com` | Optional system notices |
 
 **Do not use invented or unverified email addresses** on the public site.
@@ -61,7 +61,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 await resend.emails.send({
   from: process.env.EMAIL_FROM!,
   to: customer.email,
-  subject: `Order confirmed — ${order.reference}`,
+  subject: `Order confirmed - ${order.reference}`,
   html: renderOrderConfirmation(order),
 });
 ```
@@ -113,7 +113,7 @@ Contact and newsletter routes should use `src/lib/rate-limit.ts` to prevent abus
 - [ ] Order confirmation template reviewed
 - [ ] Shipping update template reviewed
 - [ ] Unsubscribe/consent on newsletter (already required in `newsletterSchema`)
-- [ ] Privacy policy mentions email collection — [legal-review.md](legal-review.md)
+- [ ] Privacy policy mentions email collection - [legal-review.md](legal-review.md)
 
 ## Troubleshooting
 

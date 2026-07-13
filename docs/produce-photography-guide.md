@@ -13,14 +13,14 @@ Capture **exact SKU-accurate** images: the same bag, clamshell, bunch or pack th
 | Camera | Smartphone (12MP+) or DSLR |
 | Surface | White seamless paper or cream sweep |
 | Lighting | Two soft diffused lights at 45°, or shaded north-window daylight |
-| Tripod | Optional — improves consistency |
+| Tripod | Optional - improves consistency |
 | Scale reference | Small card with SKU printed (not in final crop) |
 
 ## Backgrounds
 
-- **Primary:** pure white (`#FFFFFF`) or warm cream (`#F8F2E7`) — match site `--color-fresh-white`
+- **Primary:** pure white (`#FFFFFF`) or warm cream (`#F8F2E7`) - match site `--color-fresh-white`
 - No busy wood/granite surfaces for primary catalog images
-- Lifestyle/secondary images may use kitchen context — never as primary if title says "3 lb Bag"
+- Lifestyle/secondary images may use kitchen context - never as primary if title says "3 lb Bag"
 
 ## What to photograph
 
@@ -72,7 +72,7 @@ Capture **exact SKU-accurate** images: the same bag, clamshell, bunch or pack th
 - Shoot in consistent white balance (5500K daylight)
 - Avoid orange saturation boosts
 - Compare photo to physical product before approval
-- Minor exposure correction only — **no variety-changing edits**
+- Minor exposure correction only - **no variety-changing edits**
 
 ## Avoid over-editing
 
@@ -91,7 +91,7 @@ Allowed:
 
 ## Scale and context
 
-- Optional second image (`produce-detail`) showing size reference (coin, ruler) — no text overlays on image
+- Optional second image (`produce-detail`) showing size reference (coin, ruler) - no text overlays on image
 - Do not embed price or title text inside image file
 
 ## File naming
@@ -111,7 +111,7 @@ Use lowercase SKU with hyphens. No spaces.
 
 ## Compression
 
-1. Export WebP at quality **80–85**
+1. Export WebP at quality **80-85**
 2. Target ≤ 150 KB for 800×800 main images
 3. Keep lossless PNG source archived off-repo
 4. Run `npm run build` to confirm Next.js image optimizer accepts files
@@ -122,9 +122,9 @@ Use lowercase SKU with hyphens. No spaces.
 2. Compare photo to `data/products.ts` title, `variety`, `packageSize`, `packCount`
 3. Second person signs off match
 4. Update `data/image-credits.ts`:
-   - `imageSource: "supplier"` or in-house
-   - `dateVerified`, `verifiedBy`
-   - `productionStatus: "approved"`
+ - `imageSource: "supplier"` or in-house
+ - `dateVerified`, `verifiedBy`
+ - `productionStatus: "approved"`
 5. Set `imageVerificationStatus: "verified"` on product
 
 ## Batch workflow
@@ -147,6 +147,6 @@ npm run test:e2e    # product detail pages render images
 
 ## Related guides
 
-- [image-sourcing.md](image-sourcing.md) — priority list and missing-image rule
-- [campaign-image-guide.md](campaign-image-guide.md) — advertising use of photos
-- [food-label-verification.md](food-label-verification.md) — label photos
+- [image-sourcing.md](image-sourcing.md) - priority list and missing-image rule
+- [campaign-image-guide.md](campaign-image-guide.md) - advertising use of photos
+- [food-label-verification.md](food-label-verification.md) - label photos

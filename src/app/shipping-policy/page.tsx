@@ -51,8 +51,8 @@ export default function ShippingPolicyPage() {
     >
       <p className="mb-8 text-base leading-relaxed text-soft-graphite">
         Shipping rates, carriers, delivery areas and timeframes will be
-        published here once approved. Demo checkout may show illustrative
-        estimates only.
+        published here once approved. Checkout shows estimated shipping based
+        on order weight and destination.
       </p>
       <PolicyContent sections={sections} />
     </LegalPage>

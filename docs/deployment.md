@@ -28,7 +28,7 @@ Add these in **Project Settings → Environment Variables** for Production (and 
 | `NEXT_PUBLIC_INSTAGRAM_URL` | Optional social URL |
 | `NEXT_PUBLIC_X_URL` | Optional social URL |
 | `SUPABASE_URL` | If order DB enabled |
-| `SUPABASE_SERVICE_ROLE_KEY` | Server-only — never expose client-side |
+| `SUPABASE_SERVICE_ROLE_KEY` | Server-only - never expose client-side |
 
 Mark `STRIPE_SECRET_KEY`, `STRIPE_WEBHOOK_SECRET`, `RESEND_API_KEY`, and `SUPABASE_SERVICE_ROLE_KEY` as **sensitive**.
 

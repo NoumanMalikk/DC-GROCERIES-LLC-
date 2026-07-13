@@ -16,11 +16,11 @@ const contactEmail = getContactEmail();
 const privacySections = [
   {
     heading: "Overview",
-    body: `${storeConfig.legalName} ("we," "us") operates the ${storeConfig.brandName} website. This policy describes what information this demonstration storefront may collect and how it is used. A complete, attorney-reviewed privacy policy will replace placeholder sections below.\n\n${LEGAL_PLACEHOLDER}`,
+    body: `${storeConfig.legalName} ("we," "us") operates the ${storeConfig.brandName} website. This policy describes what information this storefront may collect and how it is used. A complete, attorney-reviewed privacy policy will replace placeholder sections below.\n\n${LEGAL_PLACEHOLDER}`,
   },
   {
     heading: "Information We Collect",
-    body: `In demo and live operation, this website may collect:\n\n• Checkout details: name, email address, phone (optional), shipping address and order notes when you place an order.\n• Contact form: name, email, optional phone, topic, message and optional order reference.\n• Newsletter sign-up: email address and consent confirmation.\n• Order lookup: order reference number and email address used at checkout.\n• Cart and browsing: product selections stored in your browser session or local storage.\n• Payment: payment card details are processed by our payment provider (Stripe) and are not stored on our servers.\n\n${LEGAL_PLACEHOLDER}`,
+    body: `This website may collect:\n\n• Checkout details: name, email address, phone (optional), shipping address and order notes when you place an order.\n• Contact form: name, email, optional phone, topic, message and optional order reference.\n• Newsletter sign-up: email address and consent confirmation.\n• Order lookup: order reference number and email address used at checkout.\n• Cart and browsing: product selections stored in your browser session or local storage.\n• Payment: payment card details are processed by our payment provider (Stripe) and are not stored on our servers.\n\n${LEGAL_PLACEHOLDER}`,
   },
   {
     heading: "How We Use Information",

@@ -25,9 +25,9 @@ Status types defined in `src/lib/orders.ts`.
 Actions:
 
 1. Verify webhook signature (`constructWebhookEvent`)
-2. Idempotency check — skip if order already `paid`
+2. Idempotency check - skip if order already `paid`
 3. Update order status → `paid`
-4. Send confirmation email via Resend — [email-setup.md](email-setup.md)
+4. Send confirmation email via Resend - [email-setup.md](email-setup.md)
 5. Notify fulfilment queue (email, dashboard, or Supabase if configured)
 
 ## 2. Order review
@@ -35,7 +35,7 @@ Actions:
 Before picking:
 
 - [ ] All line items `productionReady`
-- [ ] No refrigerated items unless cold-chain active — [refrigerated-product-readiness.md](refrigerated-product-readiness.md)
+- [ ] No refrigerated items unless cold-chain active - [refrigerated-product-readiness.md](refrigerated-product-readiness.md)
 - [ ] Shipping address in serviceable zone
 - [ ] Fraud/AVS check passed (Stripe Radar)
 
@@ -86,7 +86,7 @@ Orders created with `demoMode: true`:
 | Scenario | Action |
 |----------|--------|
 | Before pick | Cancel → `cancelled`; void/refund PaymentIntent |
-| After ship (perishable) | Follow returns policy — [legal-review.md](legal-review.md) |
+| After ship (perishable) | Follow returns policy - [legal-review.md](legal-review.md) |
 | Partial refund | Stripe partial refund; update line items |
 
 ## Customer contact
@@ -126,7 +126,7 @@ Subjects: general, order, product, allergen, shipping, returns.
 
 ## Launch QA mapping
 
-Covers requirements #47–50:
+Covers requirements #47-50:
 
 - [ ] Idempotent order creation on webhook retry
 - [ ] Protected order success page (reference + token)

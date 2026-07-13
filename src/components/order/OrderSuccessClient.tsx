@@ -8,7 +8,6 @@ import { storeConfig } from "@data/store-config";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { Container } from "@/components/shared/Container";
 import { SectionHeading } from "@/components/shared/SectionHeading";
-import { VerificationNotice } from "@/components/shared/VerificationNotice";
 import { buttonVariants } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { useReducedMotion } from "@/lib/hooks/use-reduced-motion";
@@ -85,13 +84,6 @@ export function OrderSuccessClient({ order }: OrderSuccessClientProps) {
         />
       </div>
 
-      {order.demoMode && (
-        <VerificationNotice
-          message="Demo mode order — fulfilment and pricing are for demonstration only."
-          className="mt-6"
-        />
-      )}
-
       <div className="mt-8 rounded-xl border border-border-sand bg-fresh-white p-6 shadow-card">
         <p className="text-xs font-medium uppercase tracking-wide text-soft-graphite">
           Order reference
@@ -149,7 +141,7 @@ export function OrderSuccessClient({ order }: OrderSuccessClientProps) {
               </p>
               {order.estimatedDelivery && (
                 <p className="mt-2 text-xs text-soft-graphite">
-                  Estimated delivery: {order.estimatedDelivery.min}–
+                  Estimated delivery: {order.estimatedDelivery.min}-
                   {order.estimatedDelivery.max} business days
                 </p>
               )}

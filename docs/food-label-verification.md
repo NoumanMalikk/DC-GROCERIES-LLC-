@@ -56,9 +56,9 @@ For each of the 26 products:
 
 Reject or correct any catalog copy that claims:
 
-- Organic, non-GMO, gluten-free, heart healthy — **unless printed on verified label**
-- "100%" juice — must match label (see DC-BEV-024)
-- Grade/size for eggs — must match carton (DC-REF-021)
+- Organic, non-GMO, gluten-free, heart healthy - **unless printed on verified label**
+- "100%" juice - must match label (see DC-BEV-024)
+- Grade/size for eggs - must match carton (DC-REF-021)
 
 ## Produce-specific rules
 
@@ -120,8 +120,8 @@ npm run test   # food-label-status.test.ts, production-readiness.test.ts
 
 ## Customer-facing pages
 
-- [Food Information](/food-information) — general guidance
-- [Product and Allergen Information](/product-allergen-information) — detailed allergen policy
+- [Food Information](/food-information) - general guidance
+- [Product and Allergen Information](/product-allergen-information) - detailed allergen policy
 - Product pages show `labelVerificationStatus` in info sections
 
 Always instruct customers to **review the physical label** before consumption.

@@ -67,7 +67,7 @@ export async function POST(request: Request) {
 
   return NextResponse.json({
     success: true,
-    message: `Thank you for your message. Our team will follow up by phone at ${storeConfig.phoneDisplay} — phone is our primary contact channel.`,
+    message: `Thank you for your message. Our team will follow up by phone at ${storeConfig.phoneDisplay} - phone is our primary contact channel.`,
     emailConfigured: false,
     phone: storeConfig.phoneDisplay,
   });

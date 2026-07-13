@@ -7,7 +7,7 @@ export interface FoodInformationSection {
 export const foodInformationIntro = {
   title: "Food Information",
   summary:
-    "DC Groceries provides clear product details so you can make informed choices. Information on this site is for demonstration until physical inventory and label verification are complete.",
+    "DC Groceries provides clear product details so you can make informed choices. Always confirm nutrition, allergen and storage details on the physical product label.",
 };
 
 export const foodInformationSections: FoodInformationSection[] = [
@@ -25,8 +25,8 @@ export const foodInformationSections: FoodInformationSection[] = [
     title: "Fresh Produce Handling",
     content: [
       "Fresh produce is sold by the package size or approximate weight listed on each product page.",
-      "Some items, such as banana bunches and broccoli crowns, may be priced by estimated weight. Final charges may be adjusted at fulfilment once weight-based pricing is configured.",
-      "Produce quality depends on seasonality and supplier availability. Substitutions are not enabled in demo mode.",
+      "Some items, such as banana bunches and broccoli crowns, may be priced by estimated weight. Final charges may be adjusted at fulfilment once the item is weighed.",
+      "Produce quality depends on seasonality and supplier availability. Substitutions are not enabled unless stated at checkout.",
     ],
   },
   {
@@ -34,7 +34,7 @@ export const foodInformationSections: FoodInformationSection[] = [
     title: "Refrigerated and Temperature-Sensitive Items",
     content: [
       "Eggs, milk, yogurt and certain produce items require refrigerated storage and cold-chain shipping.",
-      "Refrigerated fulfilment is not yet configured for this storefront. These items are shown for catalog demonstration and may be blocked at checkout.",
+      "Refrigerated fulfilment is not yet configured for this storefront. These items may appear in the catalog but can be blocked at checkout.",
       "Do not purchase refrigerated items expecting same-day delivery until cold-chain shipping is confirmed on the shipping policy page.",
     ],
   },
@@ -51,9 +51,9 @@ export const foodInformationSections: FoodInformationSection[] = [
     id: "weight-based-pricing",
     title: "Weight-Based Pricing",
     content: [
-      "Products marked as weight-based display an estimated weight and demo price.",
-      "The demo price is calculated from the estimated weight and may differ from the final charge once the item is weighed at fulfilment.",
-      "Weight-based pricing rules will be published on product pages and at checkout before live sales begin.",
+      "Products marked as weight-based display an estimated weight and estimated price.",
+      "The estimated price is calculated from the estimated weight and may differ from the final charge once the item is weighed at fulfilment.",
+      "Weight-based pricing details are shown on product pages and at checkout.",
     ],
   },
   {
@@ -71,15 +71,6 @@ export const foodInformationSections: FoodInformationSection[] = [
       "Storage and preparation instructions on product pages are general guidance pending label verification.",
       "Follow storage instructions on the physical product label. Refrigerate perishable items promptly after purchase or delivery.",
       "When in doubt, refer to the manufacturer or distributor information on the product packaging.",
-    ],
-  },
-  {
-    id: "demo-mode-notice",
-    title: "Demonstration Storefront Notice",
-    content: [
-      "This storefront operates in demo mode by default. Checkout may be restricted for products that are not production-ready.",
-      "Product images are placeholders until exact, legally usable photography is obtained for each SKU.",
-      "Contact us through the Contact page if you have questions about a specific product before placing an order.",
     ],
   },
 ];

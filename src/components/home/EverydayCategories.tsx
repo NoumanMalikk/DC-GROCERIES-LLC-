@@ -55,7 +55,7 @@ export function EverydayCategories() {
       <Container>
         <SectionHeading
           title="Everyday categories"
-          description="Browse by how you shop—not by aisle numbers."
+          description="Browse by how you shop - not by aisle numbers."
           className="mb-8"
         />
 

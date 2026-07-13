@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Fraunces, Manrope } from "next/font/google";
 import { AnnouncementBar } from "@/components/layout/AnnouncementBar";
 import { CartDrawer } from "@/components/cart/CartDrawer";
-import { DemoModeBanner } from "@/components/layout/DemoModeBanner";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { MobileNav } from "@/components/layout/MobileNav";
@@ -47,7 +46,7 @@ export const metadata: Metadata = {
         url: "/og-brand.png",
         width: 1200,
         height: 630,
-        alt: `${storeConfig.brandName} — ${storeConfig.tagline}`,
+        alt: `${storeConfig.brandName} - ${storeConfig.tagline}`,
       },
     ],
   },
@@ -129,7 +128,6 @@ export default function RootLayout({
         />
         <Providers>
           <SkipLink />
-          <DemoModeBanner />
           <AnnouncementBar />
           <Header />
           <MobileNav />

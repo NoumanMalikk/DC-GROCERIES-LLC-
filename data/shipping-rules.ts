@@ -103,7 +103,7 @@ export function calculateDemoShipping(
     refrigeratedEligible: shippingRules.refrigeratedEligible,
     demoMode: true,
     note:
-      "Demo shipping estimate only. Actual rates, carriers and delivery windows require business review before live fulfilment.",
+      "Shipping estimate based on order weight and destination. Final rates and carriers are confirmed at fulfilment.",
   };
 }
 

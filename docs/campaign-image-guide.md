@@ -4,7 +4,7 @@ Rules for advertising photography, social posts, email campaigns and paid media 
 
 ## Core principle
 
-**Every advertisement must show the exact product being promoted** — same SKU, variety, package size, brand, flavor and pack count as the live catalog listing.
+**Every advertisement must show the exact product being promoted** - same SKU, variety, package size, brand, flavor and pack count as the live catalog listing.
 
 ## Required accuracy
 
@@ -13,7 +13,7 @@ Rules for advertising photography, social posts, email campaigns and paid media 
 | Product | Exact SKU from `data/products.ts` |
 | Variety | Match `variety` field (Gala, Roma, Cavendish, etc.) |
 | Package size | Match `packageSize` and `sellingUnit` |
-| Brand | Match verified `brand` once configured — no stand-in brands |
+| Brand | Match verified `brand` once configured - no stand-in brands |
 | Flavor | Match title (e.g. Plain Greek, Sea Salt, 100% Apple) |
 | Pack count | Match `packCount` (3 peppers, 12 eggs, 6 rolls) |
 | Weight claims | Match `netWeight` / label verification |
@@ -50,7 +50,7 @@ Rules for advertising photography, social posts, email campaigns and paid media 
 1. Cross-check image against SKU in `data/products.ts`
 2. Confirm `imageVerificationStatus: "verified"` or dedicated campaign photo on file
 3. Confirm label claims match `labelVerificationStatus: "verified"` data
-4. Legal review for health/nutrition claims — see [legal-review.md](legal-review.md)
+4. Legal review for health/nutrition claims - see [legal-review.md](legal-review.md)
 5. Archive source file and permission record in `data/image-credits.ts`
 
 ## Demo mode campaigns

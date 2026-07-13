@@ -91,7 +91,7 @@ export function BasketBuilder() {
       <Container>
         <SectionHeading
           title="Build your basket"
-          description="Add items from produce, pantry, breakfast, beverages and household—quantities update in real time."
+          description="Add items from produce, pantry, breakfast, beverages and household - quantities update in real time."
           className="mb-8"
         />
 

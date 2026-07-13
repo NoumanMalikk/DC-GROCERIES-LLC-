@@ -3,15 +3,12 @@
 import Link from "next/link";
 import { Heart } from "lucide-react";
 import { getProductById } from "@data/products";
-import { storeConfig } from "@data/store-config";
 import { ProductGrid } from "@/components/product/ProductGrid";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { Container } from "@/components/shared/Container";
 import { EmptyState } from "@/components/shared/EmptyState";
 import { SectionHeading } from "@/components/shared/SectionHeading";
-import { VerificationNotice } from "@/components/shared/VerificationNotice";
 import { Button, buttonVariants } from "@/components/ui/button";
-import { isDemoMode } from "@data/store-config";
 import { useWishlistStore } from "@/store/wishlist";
 import { cn } from "@/lib/utils";
 
@@ -51,13 +48,6 @@ export default function WishlistPage() {
           </Button>
         )}
       </div>
-
-      {isDemoMode() && (
-        <VerificationNotice
-          message={`Demo mode: wishlist is saved locally in your browser on ${storeConfig.brandName}.`}
-          className="mb-6"
-        />
-      )}
 
       {products.length > 0 ? (
         <ProductGrid products={products} columns={4} />

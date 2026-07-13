@@ -26,7 +26,7 @@ export default function ProductAllergenInformationPage() {
       ]}
     >
       <VerificationNotice
-        message="This page provides general product information only—not medical advice. If you have a severe food allergy, read every product label and contact us before ordering."
+        message="This page provides general product information only - not medical advice. If you have a severe food allergy, read every product label and contact us before ordering."
         className="mb-8"
       />
 
@@ -39,7 +39,7 @@ export default function ProductAllergenInformationPage() {
         </h2>
         <p className="mt-3 text-base leading-relaxed text-soft-graphite">
           Major allergens recognized under U.S. food labeling requirements
-          include the following. Presence varies by product—check the physical
+          include the following. Presence varies by product - check the physical
           label on the item you receive.
         </p>
         <ul className="mt-4 grid gap-2 sm:grid-cols-2">

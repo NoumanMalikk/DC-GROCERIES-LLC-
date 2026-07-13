@@ -77,7 +77,7 @@ export function ProductCard({
 
         <div className="mt-auto flex flex-col gap-3 pt-1">
           <div className="flex min-h-[1.75rem] items-center justify-between gap-2">
-            <PriceDisplay product={product} size="md" showDemoLabel={false} />
+            <PriceDisplay product={product} size="md" />
             <AvailabilityBadge status={product.availabilityStatus} />
           </div>
 

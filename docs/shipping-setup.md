@@ -8,7 +8,7 @@ Shipping logic lives in `data/shipping-rules.ts`:
 
 | Setting | Value |
 |---------|-------|
-| `refrigeratedEligible` | `false` — cold-chain not configured |
+| `refrigeratedEligible` | `false` - cold-chain not configured |
 | `demoMode` | `true` |
 | Base shipping | $5.99 (`baseShippingCents: 599`) |
 | Per-pound surcharge | $0.35/lb |
@@ -18,9 +18,9 @@ Shipping logic lives in `data/shipping-rules.ts`:
 
 | Zone | States | Multiplier | Business days |
 |------|--------|------------|---------------|
-| Local | GA | 1.0× | 2–4 |
-| Regional | AL, FL, SC, NC, TN | 1.25× | 3–6 |
-| Extended | All other US | 1.6× | 5–10 |
+| Local | GA | 1.0× | 2-4 |
+| Regional | AL, FL, SC, NC, TN | 1.25× | 3-6 |
+| Extended | All other US | 1.6× | 5-10 |
 
 Quote function: `calculateDemoShipping(totalWeightLb, destination, orderSubtotalCents)`
 
@@ -44,8 +44,8 @@ Before shipping eggs, milk, yogurt or refrigerated produce:
 
 1. Set `refrigeratedEligible: true` in `data/shipping-rules.ts`
 2. Configure insulated packaging and ice packs
-3. Define max transit time (typically 1–2 days)
-4. Update shipping policy legal copy — [legal-review.md](legal-review.md)
+3. Define max transit time (typically 1-2 days)
+4. Update shipping policy legal copy - [legal-review.md](legal-review.md)
 5. Complete [refrigerated-product-readiness.md](refrigerated-product-readiness.md)
 
 Until then, `canShipRefrigeratedItems()` returns `false` and refrigerated products are blocked at checkout.
@@ -84,5 +84,5 @@ From QA checklist:
 - [ ] Demo shipping replaced or clearly labeled on policy page
 - [ ] Refrigerated shipping rules documented
 - [ ] Processing times defined
-- [ ] Tracking workflow configured — see [order-processing.md](order-processing.md)
+- [ ] Tracking workflow configured - see [order-processing.md](order-processing.md)
 - [ ] `localPickupEnabled` / `localDeliveryEnabled` in `data/store-config.ts` remain false until configured

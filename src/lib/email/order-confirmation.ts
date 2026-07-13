@@ -121,7 +121,7 @@ export async function sendOrderConfirmationEmail(
     return {
       sent: false,
       skippedReason: isDemoMode()
-        ? "Demo mode — email not sent unless EMAIL_DEMO_OVERRIDE is set."
+        ? "Demo mode - email not sent unless EMAIL_DEMO_OVERRIDE is set."
         : "RESEND_API_KEY not configured.",
     };
   }
@@ -134,7 +134,7 @@ export async function sendOrderConfirmationEmail(
   await resend.emails.send({
     from,
     to: order.customer.email,
-    subject: `Order confirmed — ${order.reference} | ${storeConfig.brandName}`,
+    subject: `Order confirmed - ${order.reference} | ${storeConfig.brandName}`,
     html: buildOrderEmailHtml(order),
   });
 

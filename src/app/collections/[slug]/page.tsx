@@ -6,11 +6,9 @@ import {
   getCollectionBySlug,
 } from "@data/collections";
 import { getProductsByCollection } from "@data/products";
-import { isDemoMode } from "@data/store-config";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { Container } from "@/components/shared/Container";
 import { SectionHeading } from "@/components/shared/SectionHeading";
-import { VerificationNotice } from "@/components/shared/VerificationNotice";
 import { ShopCatalog } from "@/components/shop/ShopCatalog";
 
 interface CollectionPageProps {
@@ -80,13 +78,6 @@ export default async function CollectionPage({ params }: CollectionPageProps) {
           collection
         </p>
       </div>
-
-      {isDemoMode() && (
-        <VerificationNotice
-          message="Demo mode: collection items use demonstration pricing until inventory is verified."
-          className="mb-6"
-        />
-      )}
 
       <Suspense fallback={<div className="h-96 animate-pulse rounded-xl bg-produce-mist" />}>
         <ShopCatalog

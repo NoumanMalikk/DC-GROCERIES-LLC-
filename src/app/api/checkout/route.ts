@@ -196,7 +196,7 @@ export async function POST(request: Request) {
     ...(shippingQuote.shippingCents > 0
       ? [
           {
-            name: "Demonstration shipping",
+            name: "Standard shipping",
             description: shippingQuote.note,
             unitAmountCents: shippingQuote.shippingCents,
             quantity: 1,

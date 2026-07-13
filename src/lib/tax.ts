@@ -8,7 +8,7 @@ export interface TaxEstimate {
   calculatedAtPayment: boolean;
 }
 
-/** Demo tax estimate — actual tax is finalized by Stripe at payment. */
+/** Demo tax estimate - actual tax is finalized by Stripe at payment. */
 export function calculateTaxEstimate(
   subtotalCents: number,
   state: string
@@ -20,7 +20,7 @@ export function calculateTaxEstimate(
     return {
       taxCents: 0,
       rateLabel: null,
-      note: "Tax calculated at payment. Demo mode uses demonstration pricing only.",
+      note: "Tax calculated at payment.",
       calculatedAtPayment: true,
     };
   }

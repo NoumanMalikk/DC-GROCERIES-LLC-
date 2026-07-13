@@ -35,15 +35,15 @@ cp .env.example .env.local
 
 | Variable | Service | When needed |
 |----------|---------|-------------|
-| `CONTACT_EMAIL` | — | Contact form delivery |
+| `CONTACT_EMAIL` | - | Contact form delivery |
 | `STRIPE_SECRET_KEY` | Stripe | Live/test checkout |
 | `STRIPE_WEBHOOK_SECRET` | Stripe | Payment webhooks |
 | `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY` | Stripe | Client-side Stripe.js |
 | `RESEND_API_KEY` | Resend | Order/confirmation email |
 | `EMAIL_FROM` | Resend | Sender address (verified domain) |
-| `NEXT_PUBLIC_FACEBOOK_URL` | — | Footer social link |
-| `NEXT_PUBLIC_INSTAGRAM_URL` | — | Footer social link |
-| `NEXT_PUBLIC_X_URL` | — | Footer social link |
+| `NEXT_PUBLIC_FACEBOOK_URL` | - | Footer social link |
+| `NEXT_PUBLIC_INSTAGRAM_URL` | - | Footer social link |
+| `NEXT_PUBLIC_X_URL` | - | Footer social link |
 | `SUPABASE_URL` | Supabase | Order persistence (if enabled) |
 | `SUPABASE_SERVICE_ROLE_KEY` | Supabase | Server-side database access |
 
@@ -100,5 +100,5 @@ Only after completing [launch-checklist.md](launch-checklist.md):
 |-------|-----|
 | Port 3000 in use | `PORT=3001 npm run dev` and set `PLAYWRIGHT_BASE_URL` for e2e |
 | Stripe errors in checkout | Confirm keys in `.env.local`; demo mode works without Stripe |
-| Type errors after editing products | Run `npm run typecheck` — all 26 products must satisfy `Product` type |
+| Type errors after editing products | Run `npm run typecheck` - all 26 products must satisfy `Product` type |
 | Playwright timeout | Ensure no other process blocks port 3000; increase `webServer.timeout` in `playwright.config.ts` |

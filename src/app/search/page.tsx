@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import { storeConfig } from "@data/store-config";
-import { isDemoMode } from "@data/store-config";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { Container } from "@/components/shared/Container";
 import { SectionHeading } from "@/components/shared/SectionHeading";
-import { VerificationNotice } from "@/components/shared/VerificationNotice";
 import { ShopCatalog } from "@/components/shop/ShopCatalog";
 
 export const metadata: Metadata = {
@@ -42,13 +40,6 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
         }
         className="mb-8"
       />
-
-      {isDemoMode() && (
-        <VerificationNotice
-          message="Demo mode: search results use demonstration pricing and pending verification status."
-          className="mb-6"
-        />
-      )}
 
       <Suspense fallback={<div className="h-96 animate-pulse rounded-xl bg-produce-mist" />}>
         <ShopCatalog

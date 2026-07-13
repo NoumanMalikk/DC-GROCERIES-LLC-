@@ -23,7 +23,7 @@ Prerequisites for selling temperature-sensitive items online.
 refrigeratedEligible: false
 ```
 
-`canShipRefrigeratedItems()` returns `false`, so `canPurchaseProduct()` adds `refrigerated_not_supported` for all refrigerated SKUs — even in demo cart validation.
+`canShipRefrigeratedItems()` returns `false`, so `canPurchaseProduct()` adds `refrigerated_not_supported` for all refrigerated SKUs - even in demo cart validation.
 
 Cart page shows: *"Your cart includes refrigerated items that require temperature-controlled handling."*
 
@@ -35,12 +35,12 @@ Cart page shows: *"Your cart includes refrigerated items that require temperatur
 - [ ] FIFO rotation documented
 - [ ] Expiration date check at pick time
 - [ ] Eggs: Grade A Large White verified on carton
-- [ ] Milk: whole gallon — not substituted with 2% or half gallon
-- [ ] Yogurt: plain Greek 32 oz tub — not cups or flavored
+- [ ] Milk: whole gallon - not substituted with 2% or half gallon
+- [ ] Yogurt: plain Greek 32 oz tub - not cups or flavored
 
 ### Packaging
 
-- [ ] Insulated shipper boxes sized for 1–2 day transit
+- [ ] Insulated shipper boxes sized for 1-2 day transit
 - [ ] Gel ice packs sufficient for regional zone summer temps
 - [ ] Clamshell/produce padding to prevent crushing
 - [ ] Egg cartons secured against shock
@@ -48,7 +48,7 @@ Cart page shows: *"Your cart includes refrigerated items that require temperatur
 
 ### Carrier and transit
 
-- [ ] Carrier service selected with **1–2 day max** transit to regional states
+- [ ] Carrier service selected with **1-2 day max** transit to regional states
 - [ ] No refrigerated items to extended zone until tested
 - [ ] Cut-off times for same-day pack (e.g. 12:00 PM ET)
 - [ ] Weekend/holiday hold rules defined
@@ -65,7 +65,7 @@ Cart page shows: *"Your cart includes refrigerated items that require temperatur
 - [ ] Shipping policy section "Refrigerated and Perishable Items" approved
 - [ ] Food Information page cold-chain notice updated
 - [ ] No promise of same-day delivery until capability exists
-- [ ] Return policy for perishables defined — [legal-review.md](legal-review.md)
+- [ ] Return policy for perishables defined - [legal-review.md](legal-review.md)
 
 ### Testing
 

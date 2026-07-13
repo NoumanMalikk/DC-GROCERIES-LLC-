@@ -5,9 +5,7 @@ import { storeConfig } from "@data/store-config";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { Container } from "@/components/shared/Container";
 import { SectionHeading } from "@/components/shared/SectionHeading";
-import { VerificationNotice } from "@/components/shared/VerificationNotice";
 import { ShopCatalog } from "@/components/shop/ShopCatalog";
-import { isDemoMode } from "@data/store-config";
 
 export const metadata: Metadata = {
   title: `Shop All Products | ${storeConfig.brandName}`,
@@ -29,13 +27,6 @@ export default function ShopPage() {
         description={`Browse all ${products.length} catalog items with filters for category, type, package size, price and availability.`}
         className="mb-8"
       />
-
-      {isDemoMode() && (
-        <VerificationNotice
-          message="Demo mode: prices shown are for demonstration. Product details are confirmed before fulfilment."
-          className="mb-6"
-        />
-      )}
 
       <Suspense fallback={<ShopCatalogFallback />}>
         <ShopCatalog />

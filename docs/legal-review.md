@@ -41,9 +41,9 @@ Confirm policies reflect actual operations:
 |-------|-------------------|
 | Business name | `storeConfig.legalName` |
 | Contact | `CONTACT_EMAIL`, phone `+1 (331) 731-4338` |
-| Location label | `Fairburn, Georgia` — not full street address publicly |
+| Location label | `Fairburn, Georgia` - not full street address publicly |
 | Pickup/delivery | `localPickupEnabled: false`, `localDeliveryEnabled: false` |
-| Store hours | `storeHours: null` — do not display hours |
+| Store hours | `storeHours: null` - do not display hours |
 | Substitutions | `substitutionsEnabled: false` |
 
 ### 3. Prohibited public claims
@@ -61,8 +61,8 @@ Do not publish until verified:
 
 Separate from legal policies but require review:
 
-- `/food-information` — content from `data/food-information.ts`
-- `/product-allergen-information` — allergen handling policy
+- `/food-information` - content from `data/food-information.ts`
+- `/product-allergen-information` - allergen handling policy
 
 Must state label verification is pending and customers should read physical labels.
 
@@ -111,7 +111,7 @@ Disclose collection of:
 
 - Name, email, phone, shipping/billing address
 - Order history
-- Payment tokens (via Stripe — no raw card storage)
+- Payment tokens (via Stripe - no raw card storage)
 - Newsletter email with consent
 - Cookies/analytics if enabled
 

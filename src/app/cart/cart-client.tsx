@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Heart, ShoppingBag, Snowflake, Trash2 } from "lucide-react";
 import { getProductById } from "@data/products";
-import { storeConfig, isDemoMode } from "@data/store-config";
+import { storeConfig } from "@data/store-config";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { Container } from "@/components/shared/Container";
 import { EmptyState } from "@/components/shared/EmptyState";
@@ -70,13 +70,6 @@ export default function CartPageClient() {
         }
         className="mb-8"
       />
-
-      {isDemoMode() && cartLines.length > 0 && (
-        <VerificationNotice
-          message="Demo mode: cart totals use demonstration pricing. Tax and shipping are calculated at checkout."
-          className="mb-6"
-        />
-      )}
 
       {cartLines.length === 0 ? (
         <EmptyState

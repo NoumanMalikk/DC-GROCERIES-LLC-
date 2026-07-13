@@ -51,9 +51,9 @@ Use **test keys** until launch checklist is complete.
 1. **Developers → Webhooks → Add endpoint**
 2. Endpoint URL: `https://your-domain.com/api/stripe/webhook`
 3. Select events:
-   - `payment_intent.succeeded`
-   - `payment_intent.payment_failed`
-   - `charge.refunded`
+ - `payment_intent.succeeded`
+ - `payment_intent.payment_failed`
+ - `charge.refunded`
 4. Copy **Signing secret** → `STRIPE_WEBHOOK_SECRET`
 
 For local testing use Stripe CLI:
@@ -106,7 +106,7 @@ Confirm in Stripe Dashboard → **Payments** (test mode).
 1. Switch to live API keys in Vercel production env
 2. Update webhook endpoint to production URL
 3. Set `NEXT_PUBLIC_STORE_MODE=live`
-4. Complete [launch-checklist.md](launch-checklist.md) items 43–48 (shipping, tax, billing, Stripe, webhook, idempotent orders)
+4. Complete [launch-checklist.md](launch-checklist.md) items 43-48 (shipping, tax, billing, Stripe, webhook, idempotent orders)
 
 ## Troubleshooting
 

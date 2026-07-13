@@ -63,7 +63,7 @@ export async function POST(request: Request) {
     shippingWarnings.push({
       code: "fragile_produce",
       message:
-        "Your cart includes fresh produce. Special handling may be required — contact us if you have questions.",
+        "Your cart includes fresh produce. Special handling may be required - contact us if you have questions.",
     });
   }
 

@@ -1,6 +1,6 @@
 # DC Groceries
 
-Customer-facing grocery e-commerce storefront for **DC GROCERIES LLC** — fresh produce, pantry staples, refrigerated essentials, beverages, snacks and household goods with clear package sizes and verification-first product data.
+Customer-facing grocery e-commerce storefront for **DC GROCERIES LLC** - fresh produce, pantry staples, refrigerated essentials, beverages, snacks and household goods with clear package sizes and verification-first product data.
 
 ## Tech stack
 
@@ -22,7 +22,7 @@ Customer-facing grocery e-commerce storefront for **DC GROCERIES LLC** — fresh
 # Install dependencies
 npm install
 
-# Copy environment template — never commit real secrets
+# Copy environment template - never commit real secrets
 cp .env.example .env.local
 
 # Start development server
@@ -68,7 +68,7 @@ The catalog contains **exactly 26 products** across:
 - Dairy and refrigerated
 - Beverages, snacks, household essentials
 
-Product data lives in `data/products.ts`. Images use placeholders until exact photography is sourced — see [image sourcing guide](docs/image-sourcing.md).
+Product data lives in `data/products.ts`. Images use placeholders until exact photography is sourced - see [image sourcing guide](docs/image-sourcing.md).
 
 ## Documentation
 
@@ -92,7 +92,7 @@ Product data lives in `data/products.ts`. Images use placeholders until exact ph
 
 ## Security
 
-- Never commit `.env`, `.env*.local`, or `.data/` — see `.gitignore`
+- Never commit `.env`, `.env*.local`, or `.data/` - see `.gitignore`
 - Copy `.env.example` to `.env.local` for local secrets
 - Security headers configured in `next.config.ts` (CSP report-only, X-Frame-Options, HSTS)
 

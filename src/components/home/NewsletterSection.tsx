@@ -59,7 +59,7 @@ export function NewsletterSection() {
       <Container size="narrow">
         <SectionHeading
           title="Stay in the loop"
-          description="Occasional updates on new products, catalogue changes and store news. No discount promises—just clear information."
+          description="Occasional updates on new products, catalogue changes and store news. No discount promises - just clear information."
           align="center"
           className="mb-8"
         />

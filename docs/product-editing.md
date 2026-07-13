@@ -17,7 +17,7 @@ Supporting files:
 
 ## Hard rules
 
-1. **Exactly 26 products** — the file throws if count ≠ 26.
+1. **Exactly 26 products** - the file throws if count ≠ 26.
 2. Every title must include **size, weight or count** (e.g. `3 lb Bag`, `12 Count`, `1 Bunch`).
 3. Variety must match imagery (Gala ≠ Fuji, Roma ≠ cherry tomato).
 4. No fake branded packaging or AI-generated product photos.
@@ -47,7 +47,7 @@ baseProduct({
   featured: false,
   collectionSlugs: ["pantry"],
   freshOrPackaged: "packaged",
-  sortOrder: 27, // adjust — must still total 26 items
+  sortOrder: 27, // adjust - must still total 26 items
   // …
 })
 ```
@@ -69,7 +69,7 @@ Set `isWeightBased: true` and `estimatedWeightLb` for items sold by approximate 
 
 ### Refrigerated items
 
-Set `temperatureClass: "refrigerated"`. Purchase is blocked until cold-chain shipping is configured — see [refrigerated-product-readiness.md](refrigerated-product-readiness.md).
+Set `temperatureClass: "refrigerated"`. Purchase is blocked until cold-chain shipping is configured - see [refrigerated-product-readiness.md](refrigerated-product-readiness.md).
 
 ## Marking a product production-ready
 
@@ -91,7 +91,7 @@ Update matching record in `data/image-credits.ts`.
 imageGallery: [
   {
     src: "/products/dc-fru-001-main.webp",
-    alt: "Gala Apples, 3 lb Bag — front of produce bag",
+    alt: "Gala Apples, 3 lb Bag - front of produce bag",
     type: "main",
     width: 800,
     height: 800,

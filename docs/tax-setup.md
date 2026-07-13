@@ -10,10 +10,10 @@ Demo checkout calculates tax as **$0** (`taxCents: 0` in `createOrderDraft()`). 
 
 1. Determine nexus states (Georgia home state + states where economic nexus applies)
 2. Identify product tax categories:
-   - Fresh produce (often exempt or reduced in many states)
-   - Grocery/pantry staples
-   - Beverages (may differ for juice vs soda)
-   - Household goods (often fully taxable)
+ - Fresh produce (often exempt or reduced in many states)
+ - Grocery/pantry staples
+ - Beverages (may differ for juice vs soda)
+ - Household goods (often fully taxable)
 3. Choose tax calculation provider or manual rate tables
 
 ## Recommended approach: Stripe Tax
@@ -30,11 +30,11 @@ If using Stripe for payments:
 
 | Category | Stripe tax code |
 |----------|-----------------|
-| Fresh produce | `txcd_40060003` (food for home consumption — verify per state) |
+| Fresh produce | `txcd_40060003` (food for home consumption - verify per state) |
 | Packaged grocery | `txcd_40060003` |
 | Household paper goods | `txcd_99999999` (general tangible goods) |
 
-**Consult a tax professional** — grocery taxability varies significantly by state.
+**Consult a tax professional** - grocery taxability varies significantly by state.
 
 ## Alternative: Manual tax table
 
@@ -74,7 +74,7 @@ If selling wholesale or accepting tax-exempt certificates:
 - [ ] Rates verified for primary shipping states (GA, regional zone)
 - [ ] Tax shown at checkout before payment
 - [ ] Tax stored on order record (`taxCents`)
-- [ ] Policy updated in Terms of Service — [legal-review.md](legal-review.md)
+- [ ] Policy updated in Terms of Service - [legal-review.md](legal-review.md)
 
 ## Record keeping
 

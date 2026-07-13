@@ -234,7 +234,7 @@ export function getActiveFilterChips(
     const max = filters.maxPrice ?? facets.priceRange.max;
     chips.push({
       key: "minPrice",
-      label: `Price: $${min.toFixed(2)}–$${max.toFixed(2)}`,
+      label: `Price: $${min.toFixed(2)}-$${max.toFixed(2)}`,
     });
   }
   if (filters.refrigerated) {

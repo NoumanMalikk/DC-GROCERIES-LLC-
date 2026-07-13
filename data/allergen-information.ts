@@ -1,7 +1,7 @@
 export const allergenInformationIntro = {
   title: "Product and Allergen Information",
   summary:
-    "How allergen information is presented on DC Groceries and what to know before ordering. This page provides general information only—not medical advice.",
+    "How allergen information is presented on DC Groceries and what to know before ordering. This page provides general information only - not medical advice.",
 };
 
 export const commonAllergens = [

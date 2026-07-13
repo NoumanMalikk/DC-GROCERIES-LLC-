@@ -75,7 +75,7 @@ export function ProduceMarketCard({ product, className }: ProduceMarketCardProps
         </dl>
 
         <div className="mt-auto flex min-h-[1.75rem] items-center justify-between gap-2 pt-1">
-          <PriceDisplay product={product} size="sm" showDemoLabel={false} />
+          <PriceDisplay product={product} size="sm" />
           <AvailabilityBadge status={product.availabilityStatus} />
         </div>
       </div>

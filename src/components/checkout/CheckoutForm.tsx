@@ -13,7 +13,7 @@ import {
   Snowflake,
 } from "lucide-react";
 import { useForm, Controller } from "react-hook-form";
-import { storeConfig, isDemoMode } from "@data/store-config";
+import { storeConfig } from "@data/store-config";
 import {
   calculateDemoShipping,
   canShipRefrigeratedItems,
@@ -363,16 +363,9 @@ export function CheckoutForm() {
       <SectionHeading
         as="h1"
         title="Checkout"
-        description="Guest checkout — complete each step to place your order securely."
+        description="Guest checkout - complete each step to place your order securely."
         className="mb-6"
       />
-
-      {isDemoMode() && (
-        <VerificationNotice
-          message="Demo mode: prices and shipping are for demonstration only. Payment uses Stripe test mode when configured."
-          className="mb-6"
-        />
-      )}
 
       <CheckoutStepIndicator currentStep={currentStep} />
 
@@ -557,7 +550,7 @@ export function CheckoutForm() {
                 </h2>
                 <p className="mt-1 text-sm text-soft-graphite">
                   We verify product availability, pricing and fulfilment readiness
-                  on our servers — never trusting browser prices.
+                  on our servers - never trusting browser prices.
                 </p>
 
                 <div className="mt-6">
@@ -613,7 +606,7 @@ export function CheckoutForm() {
                   Shipping method
                 </h2>
                 <p className="mt-1 text-sm text-soft-graphite">
-                  Demonstration shipping estimate for your delivery area.
+                  Shipping estimate for your delivery area.
                 </p>
 
                 {refrigeratedBlocked && (
@@ -626,7 +619,7 @@ export function CheckoutForm() {
                 {validatedCart?.hasFreshProduce &&
                   !isFragileProduceHandlingConfigured() && (
                     <VerificationNotice
-                      message="Your cart includes fresh produce. Special fragile-produce handling is not yet configured — items may require extra packaging review before dispatch."
+                      message="Your cart includes fresh produce. Special fragile-produce handling is not yet configured - items may require extra packaging review before dispatch."
                       className="mt-4"
                     />
                   )}
@@ -636,11 +629,11 @@ export function CheckoutForm() {
                     <div className="flex items-start gap-3">
                       <div className="flex-1">
                         <p className="font-semibold text-market-ink">
-                          Demonstration shipping
+                          Standard shipping
                         </p>
                         <p className="mt-1 text-sm text-soft-graphite">
                           Zone: {shippingQuote.zone} ·{" "}
-                          {shippingQuote.estimatedBusinessDays.min}–
+                          {shippingQuote.estimatedBusinessDays.min}-
                           {shippingQuote.estimatedBusinessDays.max} business days
                         </p>
                         <p className="mt-2 text-xs text-soft-graphite">

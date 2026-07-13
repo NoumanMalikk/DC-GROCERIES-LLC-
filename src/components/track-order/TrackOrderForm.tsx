@@ -45,7 +45,7 @@ interface TrackedOrder {
 
 const statusLabels: Record<string, string> = {
   pending_payment: "Awaiting payment",
-  paid: "Paid — processing",
+  paid: "Paid - processing",
   processing: "Processing",
   shipped: "Shipped",
   delivered: "Delivered",
@@ -295,7 +295,7 @@ export function TrackOrderForm() {
 
           {order.estimatedDelivery && order.status === "paid" && (
             <p className="mt-4 text-sm text-soft-graphite">
-              Estimated delivery: {order.estimatedDelivery.min}–
+              Estimated delivery: {order.estimatedDelivery.min}-
               {order.estimatedDelivery.max} business days to{" "}
               {order.shippingAddress.city}, {order.shippingAddress.state}
             </p>

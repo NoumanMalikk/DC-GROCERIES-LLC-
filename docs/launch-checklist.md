@@ -38,7 +38,7 @@ Use this checklist before setting `NEXT_PUBLIC_STORE_MODE=live` in production.
 | 17 | Reduced motion respected | `src/lib/hooks/use-reduced-motion.ts` |
 | 30 | All product cards equal dimensions | Shop, homepage, wishlist grids |
 | 31 | Consistent 1:1 image ratio | `aspect-ratio: 1/1; object-fit: contain` |
-| 32 | Long titles clamped — no card height shift | Two-line clamp on titles |
+| 32 | Long titles clamped - no card height shift | Two-line clamp on titles |
 
 ---
 
@@ -46,7 +46,7 @@ Use this checklist before setting `NEXT_PUBLIC_STORE_MODE=live` in production.
 
 | # | Item | Verification |
 |---|------|--------------|
-| 9–10 | Exactly 26 products | `npm run test` → `pack-count.test.ts` |
+| 9-10 | Exactly 26 products | `npm run test` → `pack-count.test.ts` |
 | 11 | Fresh fruit included | DC-FRU-001 through DC-FRU-005 |
 | 12 | Fresh vegetables included | DC-VEG-006 through DC-VEG-012 |
 | 13 | Herbs included | DC-HER-013, DC-HER-014 |
@@ -135,11 +135,11 @@ Use this checklist before setting `NEXT_PUBLIC_STORE_MODE=live` in production.
 
 | # | Item | Reference |
 |---|------|-----------|
-| — | `.env.example` complete | Root directory |
-| — | Secrets not committed | `.gitignore` → `.env*.local`, `.data/` |
-| — | Vercel env vars set | [deployment.md](deployment.md) |
-| — | `NEXT_PUBLIC_SITE_URL` correct | Production domain |
-| — | Security headers active | `next.config.ts` |
+| - | `.env.example` complete | Root directory |
+| - | Secrets not committed | `.gitignore` → `.env*.local`, `.data/` |
+| - | Vercel env vars set | [deployment.md](deployment.md) |
+| - | `NEXT_PUBLIC_SITE_URL` correct | Production domain |
+| - | Security headers active | `next.config.ts` |
 
 ---
 

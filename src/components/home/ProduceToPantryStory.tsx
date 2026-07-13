@@ -34,7 +34,7 @@ export function ProduceToPantryStory() {
       <Container>
         <SectionHeading
           title="From produce to pantry"
-          description="Three paths through the catalog—each linking verified listings with clear package details."
+          description="Three paths through the catalog - each linking verified listings with clear package details."
           className="mb-10"
         />
 
@@ -54,7 +54,7 @@ export function ProduceToPantryStory() {
                 shelf.
               </p>
               <p className="mt-3 max-w-md text-sm text-fresh-white/75">
-                Every link below opens a filtered view of the catalog—no
+                Every link below opens a filtered view of the catalog - no
                 generic categories, no hidden package sizes.
               </p>
             </div>

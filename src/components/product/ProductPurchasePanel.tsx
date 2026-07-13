@@ -10,7 +10,6 @@ import { VerificationNotice } from "@/components/shared/VerificationNotice";
 import { QuantitySelector } from "@/components/ui/quantity-selector";
 import { Badge } from "@/components/ui/badge";
 import { getUnitPriceLabel } from "@/lib/cart-math";
-import { isDemoMode } from "@data/store-config";
 import { cn } from "@/lib/utils";
 
 const TEMP_LABELS: Record<Product["temperatureClass"], string> = {
@@ -92,11 +91,7 @@ export function ProductPurchasePanel({
       </dl>
 
       {product.isWeightBased && (
-        <VerificationNotice message="Weight-based item: final price may vary based on actual fulfilled weight. Estimated weight is shown for demonstration." />
-      )}
-
-      {isDemoMode() && (
-        <VerificationNotice message="Demo mode: price shown is for demonstration only. Availability is confirmed before fulfilment." />
+        <VerificationNotice message="Weight-based item: final price may vary based on actual fulfilled weight." />
       )}
 
       <div className="flex flex-wrap items-center gap-4">

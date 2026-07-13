@@ -16,7 +16,7 @@ export const storageHandlingSections: StorageHandlingSection[] = [
     title: "Fresh Produce",
     content: [
       "Fresh produce is sold by the package size or approximate weight listed on each product page.",
-      "Refrigerate perishable produce promptly after purchase or delivery. Storage needs vary by item—refer to the product label.",
+      "Refrigerate perishable produce promptly after purchase or delivery. Storage needs vary by item - refer to the product label.",
       "Produce quality depends on seasonality and supplier availability. Inspect items on receipt and use within a reasonable timeframe for freshness.",
     ],
   },
